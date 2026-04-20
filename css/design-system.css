@@ -1,0 +1,322 @@
+/*
+ * NIX Agency — Design System
+ * Source: Figma / Landing • NIX Agency
+ * Node:   UI kit (20005504:63490)
+ *
+ * Структура файла:
+ *   1. Normalize / Reset
+ *   2. Color tokens        ← Figma variables → CSS custom properties
+ *   3. Typography tokens   ← Figma text styles → CSS custom properties
+ *   4. Component tokens    ← Figma components → CSS custom properties
+ *   5. Typography classes  ← utility-классы, ссылающиеся на токены
+ *   6. Button classes      ← готовые компоненты кнопок
+ *   7. Demo page styles    ← стили витрины дизайн-системы
+ *
+ * Шрифты подключаются в <head> index.html через Google Fonts (preconnect).
+ * Actay Wide — подключить локально через @font-face (см. раздел 3).
+ */
+
+
+/* ═══════════════════════════════════════════════════════════
+   1. NORMALIZE / RESET
+   ═══════════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   2. COLOR TOKENS
+   Figma variable name → CSS custom property
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  /* Figma: cocane */
+  --color-cocane:   #FFFFFF;
+
+  /* Figma: neutral */
+  --color-neutral:  #F5F5F5;
+
+  /* Figma: dark */
+  --color-dark:     #121313;
+
+  /* Figma: violet */
+  --color-violet:   #D7D6FF;
+
+  /* Figma: lime */
+  --color-lime:     #CCFF7A;
+
+  /* Figma: orange */
+  --color-orange:   #F9CD67;
+
+  /* Figma: pink */
+  --color-pink:     #FEBEE7;
+
+  /* Figma: grey */
+  --color-grey:     #8F8F9C;
+
+  /* Figma: 4 stars */
+  --color-4-stars:  #BDBCE0;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   3. TYPOGRAPHY TOKENS
+   Figma text style → группа CSS custom properties.
+
+   Actay Wide не на Google Fonts — раскомментировать @font-face
+   когда шрифт будет в папке fonts/
+   ═══════════════════════════════════════════════════════════ */
+
+/*
+ * @font-face {
+ *   font-family: 'Actay Wide';
+ *   src: url('../fonts/ActayWide-Bold.woff2') format('woff2');
+ *   font-weight: 700;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+:root {
+  /* ── Figma: Body 24 ───────────────────────────────────────
+     family: Onest | Regular | 400
+     size: 24px | line-height: 1.2 | letter-spacing: -1px     */
+  --font-body-24-family:           'Onest', sans-serif;
+  --font-body-24-weight:           400;
+  --font-body-24-size:             24px;
+  --font-body-24-line-height:      1.2;
+  --font-body-24-letter-spacing:   -1px;
+
+  /* ── Figma: Body 16 ───────────────────────────────────────
+     family: Onest | Light | 300
+     size: 16px | line-height: 1.3 | letter-spacing: 1px      */
+  --font-body-16-family:           'Onest', sans-serif;
+  --font-body-16-weight:           300;
+  --font-body-16-size:             16px;
+  --font-body-16-line-height:      1.3;
+  --font-body-16-letter-spacing:   1px;
+
+  /* ── Figma: H2 (Desktop) ──────────────────────────────────
+     family: Actay Wide | Bold | 700
+     size: 40px | line-height: 1.2 | letter-spacing: 0        */
+  --font-h2-family:                'Actay Wide', sans-serif;
+  --font-h2-weight:                700;
+  --font-h2-size:                  40px;
+  --font-h2-line-height:           1.2;
+  --font-h2-letter-spacing:        0px;
+
+  /* ── Figma: Mobile H2 ─────────────────────────────────────
+     family: Unbounded | Medium | 500
+     size: 26px | line-height: 1.15 | letter-spacing: 0       */
+  --font-mobile-h2-family:         'Unbounded', sans-serif;
+  --font-mobile-h2-weight:         500;
+  --font-mobile-h2-size:           26px;
+  --font-mobile-h2-line-height:    1.15;
+  --font-mobile-h2-letter-spacing: 0px;
+
+  /* ── Figma: Mob H3 ────────────────────────────────────────
+     family: Unbounded | Medium | 500
+     size: 20px | line-height: 1.2 | letter-spacing: 0        */
+  --font-mob-h3-family:            'Unbounded', sans-serif;
+  --font-mob-h3-weight:            500;
+  --font-mob-h3-size:              20px;
+  --font-mob-h3-line-height:       1.2;
+  --font-mob-h3-letter-spacing:    0px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   4. COMPONENT TOKENS — BUTTONS
+   Figma UI kit / Page 7
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  /* Primary — filled dark ("обсудить проект", 198×48) */
+  --btn-primary-height:        48px;
+  --btn-primary-padding-x:     24px;
+  --btn-primary-bg:            var(--color-dark);
+  --btn-primary-color:         var(--color-cocane);
+  --btn-primary-border:        none;
+  --btn-primary-radius:        100px;
+
+  /* Secondary — outline ("связаться", 155×44) */
+  --btn-secondary-height:      44px;
+  --btn-secondary-padding-x:   24px;
+  --btn-secondary-bg:          transparent;
+  --btn-secondary-color:       var(--color-dark);
+  --btn-secondary-border:      1px solid var(--color-dark);
+  --btn-secondary-radius:      100px;
+
+  /* Ghost — text + arrow ("смотреть все", 153×44) */
+  --btn-ghost-height:          44px;
+  --btn-ghost-padding-x:       0px;
+  --btn-ghost-bg:              transparent;
+  --btn-ghost-color:           var(--color-dark);
+  --btn-ghost-border:          none;
+  --btn-ghost-radius:          0px;
+
+  /* Icon button — social / utility */
+  --btn-icon-size:             48px;
+  --btn-icon-sm-size:          36px;
+  --btn-icon-bg:               var(--color-neutral);
+  --btn-icon-radius:           50%;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   5. TYPOGRAPHY UTILITY CLASSES
+   Каждый класс = один Figma text style
+   ═══════════════════════════════════════════════════════════ */
+
+/* Figma: H2 */
+.text-h2 {
+  font-family:    var(--font-h2-family);
+  font-weight:    var(--font-h2-weight);
+  font-size:      var(--font-h2-size);
+  line-height:    var(--font-h2-line-height);
+  letter-spacing: var(--font-h2-letter-spacing);
+}
+
+/* Figma: Mobile H2 */
+.text-mobile-h2 {
+  font-family:    var(--font-mobile-h2-family);
+  font-weight:    var(--font-mobile-h2-weight);
+  font-size:      var(--font-mobile-h2-size);
+  line-height:    var(--font-mobile-h2-line-height);
+  letter-spacing: var(--font-mobile-h2-letter-spacing);
+}
+
+/* Figma: Mob H3 */
+.text-mob-h3 {
+  font-family:    var(--font-mob-h3-family);
+  font-weight:    var(--font-mob-h3-weight);
+  font-size:      var(--font-mob-h3-size);
+  line-height:    var(--font-mob-h3-line-height);
+  letter-spacing: var(--font-mob-h3-letter-spacing);
+}
+
+/* Figma: Body 24 */
+.text-body-24 {
+  font-family:    var(--font-body-24-family);
+  font-weight:    var(--font-body-24-weight);
+  font-size:      var(--font-body-24-size);
+  line-height:    var(--font-body-24-line-height);
+  letter-spacing: var(--font-body-24-letter-spacing);
+}
+
+/* Figma: Body 16 */
+.text-body-16 {
+  font-family:    var(--font-body-16-family);
+  font-weight:    var(--font-body-16-weight);
+  font-size:      var(--font-body-16-size);
+  line-height:    var(--font-body-16-line-height);
+  letter-spacing: var(--font-body-16-letter-spacing);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   6. BUTTON UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════ */
+.btn {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             8px;
+  cursor:          pointer;
+  text-decoration: none;
+  white-space:     nowrap;
+  border:          none;
+  transition:      opacity 0.2s ease;
+  font-family:     var(--font-body-16-family);
+  font-weight:     var(--font-body-16-weight);
+  font-size:       var(--font-body-16-size);
+  line-height:     var(--font-body-16-line-height);
+  letter-spacing:  var(--font-body-16-letter-spacing);
+}
+.btn:hover { opacity: 0.75; }
+
+/* Primary */
+.btn-primary {
+  height:           var(--btn-primary-height);
+  padding:          0 var(--btn-primary-padding-x);
+  background-color: var(--btn-primary-bg);
+  color:            var(--btn-primary-color);
+  border:           var(--btn-primary-border);
+  border-radius:    var(--btn-primary-radius);
+}
+
+/* Secondary */
+.btn-secondary {
+  height:           var(--btn-secondary-height);
+  padding:          0 var(--btn-secondary-padding-x);
+  background-color: var(--btn-secondary-bg);
+  color:            var(--btn-secondary-color);
+  border:           var(--btn-secondary-border);
+  border-radius:    var(--btn-secondary-radius);
+}
+
+/* Ghost */
+.btn-ghost {
+  height:           var(--btn-ghost-height);
+  padding:          0 var(--btn-ghost-padding-x);
+  background-color: var(--btn-ghost-bg);
+  color:            var(--btn-ghost-color);
+  border:           var(--btn-ghost-border);
+  border-radius:    var(--btn-ghost-radius);
+}
+
+/* Icon button */
+.btn-icon {
+  width:            var(--btn-icon-size);
+  height:           var(--btn-icon-size);
+  background-color: var(--btn-icon-bg);
+  border:           none;
+  border-radius:    var(--btn-icon-radius);
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  cursor:           pointer;
+  flex-shrink:      0;
+  transition:       background-color 0.2s ease;
+}
+.btn-icon:hover { background-color: var(--color-violet); }
+
+.btn-icon--sm {
+  width:  var(--btn-icon-sm-size);
+  height: var(--btn-icon-sm-size);
+}
+
+
+/* Section 7 (demo page styles) moved out — page styles now in main.css */

@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NIX Agency — цифровые решения для вашего бизнеса. Создаем сайты, автоматизируем процессы и продвигаем бренд онлайн." />
+
+  <title>NIX Agency — Цифровые решения для бизнеса</title>
+
+  <!-- Google Fonts: Onest 300/400/500, Unbounded 200/500 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500&family=Unbounded:wght@200;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Design System Tokens -->
+  <link rel="stylesheet" href="css/design-system.css" />
+  <!-- Page Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<div class="page" id="scale-wrapper">
+
+  <!-- ═══ HEADER — Figma 20005072:2613 ═══ -->
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="/" class="header__logo">
+        <img src="assets/logo.svg" alt="NIX Agency" />
+      </a>
+
+      <!-- Navbar -->
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="/">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="/cases">Кейсы</a></li>
+          <li><a href="/blog">Блог</a></li>
+          <li><a href="/contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#contacts" class="header__cta">
+        связаться
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Burger (tablet / mobile) -->
+      <button class="header__burger" type="button" aria-label="Меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21M3 6H21M3 18H21" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO — Figma 20005072:2543 ═══ -->
+  <section class="hero" id="hero">
+    <div class="container">
+
+      <!-- ── H1 Title ── -->
+      <div class="hero__title">
+        <h1>
+          <span class="hero__title-bold">Цифровые решения</span>
+          <span class="hero__title-light">для вашего бизнеса</span>
+        </h1>
+
+        <!-- Sparkle ✦ -->
+        <div class="hero__sparkle">
+          <img src="assets/icons/sparkle.svg" alt="" />
+        </div>
+
+        <!-- Circular "DIGITAL • AGENCY •" badge (rotating component) -->
+        <div class="hero__circular-badge rotating-badge">
+          <img src="assets/digital.png" alt="Digital Agency" />
+        </div>
+      </div>
+
+
+      <!-- ── Cards ── -->
+      <div class="hero__cards">
+
+        <!-- Card 1: Violet — Figma 20005072:2545 -->
+        <div class="hero__card-violet">
+
+          <!-- Star decoration -->
+          <div class="hero__card-star">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_20005072_2558)">
+              <mask id="mask0_20005072_2558" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="32" height="32">
+              <path d="M32 -1H0V31H32V-1Z" fill="white"/>
+              </mask>
+              <g mask="url(#mask0_20005072_2558)">
+              <path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/>
+              </g>
+              </g>
+              <defs>
+              <clipPath id="clip0_20005072_2558">
+              <rect width="30" height="30" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+
+          </div>
+
+          <p class="hero__card-text">
+            Создаем сайты, автоматизируем процессы
+            и&nbsp;продвигаем ваш бренд онлайн
+          </p>
+
+          <div class="hero__card-bottom">
+            <button class="hero__card-cta" type="button">обсудить проект</button>
+            <div class="hero__card-social">
+              <a href="#" class="hero__card-social-btn" aria-label="Telegram">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="hero__card-social-circle" x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#121313"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M36.0811 24.1001C36.0811 30.7165 30.7175 36.0801 24.1011 36.0801C17.4847 36.0801 12.1211 30.7165 12.1211 24.1001C12.1211 17.4838 17.4847 12.1201 24.1011 12.1201C30.7175 12.1201 36.0811 17.4838 36.0811 24.1001ZM25.2491 20.4241C23.191 21.3131 17.2567 23.8377 17.2567 23.8377C15.8503 24.4067 16.6735 24.9401 16.6735 24.9401C16.6735 24.9401 17.8741 25.3668 18.9032 25.6868C19.9323 26.0068 20.4811 25.6512 20.4811 25.6512C20.4811 25.6512 22.8823 24.0155 25.3177 22.2731C27.0328 21.0642 26.6212 22.0598 26.2096 22.4865C25.3177 23.411 23.8427 24.8689 22.6078 26.0424C22.059 26.5402 22.3334 26.9669 22.5736 27.1802C23.2719 27.7928 24.9167 28.9068 25.6634 29.4126C25.8703 29.5528 26.0083 29.6462 26.0381 29.6693C26.2096 29.8116 27.1701 30.4516 27.7532 30.3094C28.3363 30.1672 28.4049 29.3493 28.4049 29.3493C28.4049 29.3493 28.8508 26.4335 29.2625 23.7666C29.3387 23.243 29.415 22.7304 29.4861 22.2523C29.6708 21.0099 29.8208 20.0013 29.8456 19.6418C29.9485 18.4328 28.7136 18.9306 28.7136 18.9306C28.7136 18.9306 26.0381 20.0685 25.2491 20.4241Z" fill="#121313"/>
+                </svg>
+                <span class="hero__card-social-label">связаться в телеграм</span>
+                <span class="hero__card-social-info">
+                  <span class="hero__card-social-sub">Написать в</span>
+                  <span class="hero__card-social-name">Telegram</span>
+                </span>
+              </a>
+              <a href="#" class="hero__card-social-btn" aria-label="WhatsApp">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="hero__card-social-circle" x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#121313"/>
+                  <path d="M12.3574 34.965L14.0284 28.7574C12.6808 26.3393 12.2527 23.5174 12.8225 20.8098C13.3924 18.1022 14.9221 15.6903 17.1309 14.0169C19.3396 12.3434 22.0794 11.5206 24.8473 11.6993C27.6152 11.8781 30.2257 13.0465 32.1996 14.9901C34.1736 16.9338 35.3787 19.5222 35.5937 22.2806C35.8087 25.0389 35.0193 27.7821 33.3703 30.0067C31.7213 32.2313 29.3233 33.7882 26.6163 34.3916C23.9094 34.995 21.0751 34.6045 18.6335 33.2917L12.3574 34.965ZM18.9361 30.9688L19.3243 31.1985C21.0928 32.244 23.1583 32.6767 25.1991 32.4291C27.2398 32.1814 29.1411 31.2674 30.6067 29.8294C32.0723 28.3914 33.0198 26.5102 33.3016 24.479C33.5834 22.4477 33.1836 20.3806 32.1646 18.5997C31.1456 16.8187 29.5645 15.424 27.6679 14.6329C25.7712 13.8418 23.6655 13.6988 21.6788 14.226C19.6921 14.7533 17.9361 15.9213 16.6844 17.5479C15.4327 19.1746 14.7556 21.1686 14.7586 23.2191C14.757 24.9194 15.2284 26.5868 16.1204 28.0356L16.3638 28.4359L15.4297 31.9006L18.9361 30.9688Z" fill="#121313"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9361 30.9688L19.3243 31.1985C21.0928 32.244 23.1583 32.6767 25.1991 32.4291C27.2398 32.1814 29.1411 31.2674 30.6067 29.8294C32.0723 28.3914 33.0198 26.5102 33.3016 24.479C33.5834 22.4477 33.1836 20.3806 32.1646 18.5997C31.1456 16.8187 29.5645 15.424 27.6679 14.6329C25.7712 13.8418 23.6655 13.6988 21.6788 14.226C19.6921 14.7533 17.9361 15.9213 16.6844 17.5479C15.4327 19.1746 14.7556 21.1686 14.7586 23.2191C14.757 24.9194 15.2284 26.5868 16.1204 28.0356L16.3638 28.4359L15.4297 31.9006L18.9361 30.9688ZM27.5777 24.4364C27.8627 24.5012 28.1291 24.63 28.3566 24.8131C28.804 25.0756 29.5342 25.3971 29.6526 25.9418C29.702 26.2081 29.6675 26.4832 29.5539 26.7292C29.3607 27.1365 29.07 27.4901 28.7075 27.759C28.345 28.0279 27.9218 28.2038 27.4751 28.2713C26.6911 28.36 25.8977 28.2353 25.1791 27.9103C24.4873 27.6741 23.8251 27.3592 23.2055 26.972C21.9708 26.2099 20.8961 25.216 20.0412 24.0454C19.7781 23.689 19.5343 23.3188 19.3109 22.9364C19.0013 22.4372 18.7663 21.8956 18.6136 21.3287C18.5534 21.0928 18.5225 20.8503 18.5215 20.6069C18.5064 20.1734 18.589 19.742 18.7632 19.3445C18.9374 18.947 19.1987 18.5936 19.528 18.3102C19.7177 18.1418 19.9522 18.0318 20.2031 17.9934C20.4541 17.9549 20.7109 17.9898 20.9424 18.0937C21.3914 18.472 21.7224 18.9707 21.8963 19.5307C22.1213 19.9302 22.2264 20.3858 22.199 20.8431C22.0755 21.2578 21.8493 21.6347 21.5411 21.939C21.4531 22.0141 21.3977 22.1204 21.3866 22.2355C21.3756 22.3505 21.4097 22.4653 21.4819 22.5558C22.3277 24.0052 23.6399 25.1267 25.2054 25.7383C25.2925 25.7859 25.3941 25.8002 25.491 25.7785C25.5878 25.7567 25.6735 25.7004 25.7317 25.6202C26.008 25.2856 26.2843 24.6162 26.712 24.4391C26.9966 24.3725 27.2926 24.3716 27.5777 24.4364Z" fill="#121313"/>
+                </svg>
+                <span class="hero__card-social-label">связаться в whatsapp</span>
+                <span class="hero__card-social-info">
+                  <span class="hero__card-social-sub">Написать в</span>
+                  <span class="hero__card-social-name">WhatsApp</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Lime — Figma 20005072:2564 -->
+        <div class="hero__card-lime">
+
+          <h2 class="hero__card-lime-title">Смотреть услуги</h2>
+
+          <!-- Tags cloud -->
+          <div class="hero__tags">
+            <span class="hero__tag hero__tag--ai">AI</span>
+            <span class="hero__tag hero__tag--blur hero__tag--yandex">Яндекс Директ</span>
+            <span class="hero__tag hero__tag--blur hero__tag--avito">Авито</span>
+            <span class="hero__tag hero__tag--websites">Веб-сайты</span>
+            <span class="hero__tag hero__tag--ads">Реклама</span>
+            <span class="hero__tag hero__tag--blur hero__tag--crm">CRM</span>
+            <span class="hero__tag hero__tag--bitrix">Битрикс24</span>
+            <span class="hero__tag hero__tag--blur hero__tag--seo">SEO<span class="hero__tag-seo-suffix">-продвижение</span></span>
+
+            <!-- @ icon circle -->
+            <div class="hero__tag-icon hero__tag-icon--at">@</div>
+
+            <!-- Sort icon circle -->
+            <div class="hero__tag-icon hero__tag-icon--sort">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1416 13.1585L21.4527 9.33728C20.7349 5.3554 16.925 2.70937 12.9431 3.42721L9.1219 4.11609C5.14002 4.83394 2.49399 8.64382 3.21183 12.6257L3.90071 16.4469C4.61856 20.4288 8.42844 23.0748 12.4103 22.357L16.2315 21.6681C18.1437 21.3234 19.8406 20.2332 20.949 18.6373C22.0573 17.0414 22.4863 15.0707 22.1416 13.1585ZM11.6518 16.9106L7.79055 14.2289C7.47941 14.0125 7.40234 13.585 7.61833 13.2736L10.2975 9.45005C10.5191 9.15388 10.9354 9.08638 11.2392 9.29738C11.543 9.50838 11.6252 9.92208 11.425 10.2331L9.13488 13.5306L12.4324 15.8208C12.7435 16.0371 12.8206 16.4647 12.6046 16.7761C12.5023 16.9275 12.3431 17.0312 12.1632 17.0637C11.9834 17.0961 11.798 17.0545 11.6493 16.9483L11.6518 16.9106ZM13.8188 16.0268C13.8531 16.2052 13.9549 16.3635 14.1031 16.4687L14.1006 16.5064C14.2494 16.6126 14.4347 16.6542 14.6146 16.6217C14.7945 16.5893 14.9536 16.4856 15.0559 16.3341L17.7376 12.4729C17.8438 12.3242 17.8854 12.1388 17.853 11.9589C17.8206 11.7791 17.7169 11.6199 17.5654 11.5176L13.7042 8.83591C13.3931 8.63576 12.9794 8.7179 12.7684 9.02171C12.5574 9.32551 12.6249 9.74185 12.9211 9.96343L16.2185 12.2536L13.9309 15.5134C13.8305 15.6644 13.7905 15.8476 13.8188 16.0268Z" fill="white"/>
+              </svg>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE LINE — Figma 20005072:2633 ═══ -->
+  <section class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+      <div class="marquee__content" aria-hidden="true">
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ WHY US — Figma 20005072:2641 ═══ -->
+  <section class="why" id="why">
+    <div class="container">
+
+      <!-- Section title -->
+      <h2 class="why__title">Почему проекты с нами успешнее</h3>
+
+      <!-- Decorative star -->
+      <div class="why__star">
+        <img src="assets/icons/star-why.svg" alt="" />
+      </div>
+
+      <!-- Cards -->
+      <div class="why__cards">
+
+        <!-- Card 01 -->
+        <article class="why__card">
+          <div class="why__card-icon why__card-icon--orange">
+            <img src="assets/icons/sort-card.svg" alt="" class="why__card-icon-img why__card-icon-img--rotated" />
+          </div>
+          <div class="why__card-body">
+            <span class="why__card-number">01</span>
+            <h3 class="why__card-title">Погружаемся<br>в ваш продукт</h3>
+            <div class="why__card-reveal">
+              <div class="why__card-reveal-inner">
+                <hr class="why__card-divider" />
+                <p class="why__card-desc">Мы изучаем продукт в деталях, анализируем аудиторию, рынок и сценарии использования. Формируем позиционирование и проводим UX-исследования, чтобы решения опирались на данные и факты</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="why__card">
+          <div class="why__card-icon why__card-icon--pink">
+            <img src="assets/icons/flame.svg" alt="" class="why__card-icon-img" />
+          </div>
+          <div class="why__card-body">
+            <span class="why__card-number">02</span>
+            <h3 class="why__card-title">Опыт и сильная команда</h3>
+            <div class="why__card-reveal">
+              <div class="why__card-reveal-inner">
+                <hr class="why__card-divider" />
+                <p class="why__card-desc">Привлечение клиентов с помощью SMM, SEO, рекламы на Яндекс.Директ и продвижения на Авито</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="why__card">
+          <div class="why__card-icon why__card-icon--violet">
+            <img src="assets/icons/share.svg" alt="" class="why__card-icon-img" />
+          </div>
+          <div class="why__card-body">
+            <span class="why__card-number">03</span>
+            <h3 class="why__card-title">Битрикс24 и бизнес-экспертиза</h3>
+            <div class="why__card-reveal">
+              <div class="why__card-reveal-inner">
+                <hr class="why__card-divider" />
+                <p class="why__card-desc">Настройка CRM-системы под ваши задачи, автоматизация продаж и&nbsp;управление клиентами</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICES — Figma 20005072:2668 ═══ -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <!-- Section title -->
+      <div class="services__header">
+        <h2 class="services__title">Услуги</h2>
+        <div class="services__star">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_20005072_2727)">
+            <mask id="mask0_20005072_2727" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="32" height="32">
+            <path d="M32 -1H0V31H32V-1Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask0_20005072_2727)">
+            <path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_20005072_2727">
+            <rect width="30" height="30" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="services__cards">
+
+        <!-- Card 1: Lime — Дизайн и разработка сайтов -->
+        <div class="services__card services__card--lime">
+          <div class="services__card-icon">
+            <img src="assets/icons/code.svg" alt="" />
+          </div>
+          <div class="services__card-body">
+            <h3 class="services__card-title">Дизайн <br>и разработка сайтов</h3>
+            <div class="services__card-bottom">
+              <p class="services__card-price">от 60 000 ₽</p>
+              <a href="#" class="services__card-arrow" aria-label="Подробнее">
+                <svg width="18" height="18" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                  <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Violet — Внедрение Битрикс24 -->
+        <div class="services__card services__card--violet">
+          <div class="services__card-icon">
+            <img src="assets/icons/clock.svg" alt="" />
+          </div>
+          <div class="services__card-body">
+            <h3 class="services__card-title">Внедрение Битрикс24</h3>
+            <div class="services__card-bottom">
+              <p class="services__card-price">от 50 000 ₽</p>
+              <a href="#" class="services__card-arrow" aria-label="Подробнее">
+                <svg width="18" height="18" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                  <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Partner badge -->
+          <div class="services__badge">
+            <span class="services__badge-text">Мы — официальный партнёр</span>
+            <img src="assets/bitrix24.png" alt="Bitrix24" class="services__badge-logo" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CASES — Figma 20005072:2733 ═══ -->
+  <section class="cases" id="cases">
+    <div class="container">
+
+      <!-- Header: title + tabs + link -->
+      <div class="cases__header">
+        <h2 class="cases__title">Кейсы</h2>
+        <a href="#" class="cases__all">
+          смотреть все
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+            <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="cases__tabs">
+        <button class="cases__tab cases__tab--active" type="button" data-filter="design">Дизайн сайтов</button>
+        <button class="cases__tab" type="button" data-filter="bitrix">Битрикс24</button>
+        <button class="cases__tab" type="button" data-filter="avito">Авито</button>
+        <button class="cases__tab" type="button" data-filter="yandex">Яндекс.Директ</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="cases__list">
+
+        <!-- Case 1: Lingo Magic -->
+        <article class="cases__card" data-category="design">
+          <div class="cases__card-preview cases__card-preview--violet">
+            <img class="cases__card-mockup" src="assets/case1.webp" alt="Lingo Magic — макет на ноутбуке">
+            <img class="cases__card-mockup cases__card-mockup--hover" src="assets/case1-hoverf.webp" alt="" aria-hidden="true">
+            <div class="cases__card-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <g clip-path="url(#clip0_20005105_22621)">
+                              <path d="M12.5833 10.648V18.968H11.0312V10.064L12.5833 10.648Z" fill="black"/>
+                              <path d="M6.38477 9.87198C6.38477 7.74398 7.54477 6.58398 8.90477 6.58398C10.2648 6.58398 10.4568 6.77598 12.0008 7.55198C13.5448 8.32798 13.9368 8.51998 14.7128 8.51998C15.4888 8.51998 15.8728 7.93598 15.8728 6.77598H17.2248C17.4168 9.09598 16.0648 10.064 14.7048 10.064C13.3448 10.064 12.9608 9.87198 11.6088 9.09598C10.2568 8.31998 9.86477 8.12798 9.08877 8.12798C8.31277 8.12798 7.92877 8.71198 7.73677 10.064L6.38477 9.87198Z" fill="black"/>
+                              <path d="M12 24C5.384 24 0 18.616 0 12C0 5.384 5.384 0 12 0C18.616 0 24 5.384 24 12C24 18.616 18.616 24 12 24ZM12 0.776C5.808 0.776 0.776 5.808 0.776 12C0.776 18.192 5.808 23.224 12 23.224C18.192 23.224 23.224 18.192 23.224 12C23.224 5.808 18.192 0.776 12 0.776Z" fill="black"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_20005105_22621">
+                              <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                            <span class="cases__card-badge-text">Тильда</span>
+            </div>
+          </div>
+          <div class="cases__card-info">
+            <div class="cases__card-info-top">
+              <h3 class="cases__card-name">Lingo Magic</h3>
+              <span class="cases__card-url">lingo-magic.com</span>
+            </div>
+            <a href="lingo-magic.html" class="cases__card-btn">
+              о проекте
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 2: Кампус (reversed layout) -->
+        <article class="cases__card cases__card--reverse" data-category="design">
+          <div class="cases__card-preview cases__card-preview--pink">
+            <img class="cases__card-mockup" src="assets/case2.webp" alt="Кампус — макет на ноутбуке">
+            <img class="cases__card-mockup cases__card-mockup--hover" src="assets/case2-hoverf.webp" alt="" aria-hidden="true">
+            <div class="cases__card-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_20005105_22621)">
+                <path d="M12.5833 10.648V18.968H11.0312V10.064L12.5833 10.648Z" fill="black"/>
+                <path d="M6.38477 9.87198C6.38477 7.74398 7.54477 6.58398 8.90477 6.58398C10.2648 6.58398 10.4568 6.77598 12.0008 7.55198C13.5448 8.32798 13.9368 8.51998 14.7128 8.51998C15.4888 8.51998 15.8728 7.93598 15.8728 6.77598H17.2248C17.4168 9.09598 16.0648 10.064 14.7048 10.064C13.3448 10.064 12.9608 9.87198 11.6088 9.09598C10.2568 8.31998 9.86477 8.12798 9.08877 8.12798C8.31277 8.12798 7.92877 8.71198 7.73677 10.064L6.38477 9.87198Z" fill="black"/>
+                <path d="M12 24C5.384 24 0 18.616 0 12C0 5.384 5.384 0 12 0C18.616 0 24 5.384 24 12C24 18.616 18.616 24 12 24ZM12 0.776C5.808 0.776 0.776 5.808 0.776 12C0.776 18.192 5.808 23.224 12 23.224C18.192 23.224 23.224 18.192 23.224 12C23.224 5.808 18.192 0.776 12 0.776Z" fill="black"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_20005105_22621">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+              <span class="cases__card-badge-text">Тильда</span>
+            </div>
+          </div>
+          <div class="cases__card-info">
+            <div class="cases__card-info-top">
+              <h3 class="cases__card-name">Кампус — редизайн лендинга для&nbsp;образовательных курсов</h3>
+              <span class="cases__card-url">ed-club.ru</span>
+            </div>
+            <a href="campus.html" class="cases__card-btn">
+              о проекте
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 3: ALTAR Game store -->
+        <article class="cases__card" data-category="design">
+          <div class="cases__card-preview cases__card-preview--neutral">
+            <img class="cases__card-mockup" src="assets/case3.webp" alt="ALTAR Game store — макет на ноутбуке">
+            <img class="cases__card-mockup cases__card-mockup--hover" src="assets/case3-hoverf.webp" alt="" aria-hidden="true">
+          </div>
+          <div class="cases__card-info">
+            <div class="cases__card-info-top">
+              <h3 class="cases__card-name">ALTAR Game store</h3>
+              <span class="cases__card-url">altar-game.ru</span>
+            </div>
+            <a href="#" class="cases__card-btn">
+              о проекте
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 4: Языковая школа -->
+        <article class="cases__card cases__card--reverse" data-category="design">
+          <div class="cases__card-preview cases__card-preview--violet">
+            <img class="cases__card-mockup" src="assets/case4.webp" alt="Сайт для языковой школы — макет на ноутбуке">
+            <img class="cases__card-mockup cases__card-mockup--hover" src="assets/case4-hoverf.webp" alt="" aria-hidden="true">
+          </div>
+          <div class="cases__card-info">
+            <div class="cases__card-info-top">
+              <h3 class="cases__card-name">Сайт для языковой школы</h3>
+              <span class="cases__card-url">lang-school.ru</span>
+            </div>
+            <a href="#" class="cases__card-btn">
+              о проекте
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bitrix24 cases group — Figma 20004264:36654 -->
+      <div class="cases__group cases__group--bitrix" data-category="bitrix" hidden>
+        <div class="cases__row cases__row--2">
+          <!-- case_01 -->
+          <article class="bcase">
+            <div class="bcase__mockup">
+              <picture>
+                <source media="(max-width: 640px)" srcset="assets/bitrix-mob-case1.webp">
+                <source media="(max-width: 1200px)" srcset="assets/bitrix-640-case1.webp">
+                <img class="bcase__img" src="assets/bitrix-case1.webp" alt="Внедрение Битрикс24 для строительной компании">
+              </picture>
+              <div class="bcase__stats bcase__stats--row">
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">смарт-процессов</span>
+                  <span class="bcase__stat-value">5</span>
+                </div>
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">времени<br>на обработку заявки</span>
+                  <span class="bcase__stat-value">–81%</span>
+                </div>
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">конверсии<br>в оплату</span>
+                  <span class="bcase__stat-value">+28%</span>
+                </div>
+              </div>
+            </div>
+            <p class="bcase__title">Внедрение Битрикс24 для строительной компании</p>
+          </article>
+
+          <!-- case_02 -->
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup">
+              <picture>
+                <source media="(max-width: 640px)" srcset="assets/bitrix-mob-case2.webp">
+                <source media="(max-width: 1200px)" srcset="assets/bitrix-640-case2.webp">
+                <img class="bcase__img" src="assets/bitrix-case2.webp" alt="CRM для аренды и ремонта оборудования">
+              </picture>
+              <div class="bcase__stats bcase__stats--col">
+                <div class="bcase__stat bcase__stat--right">
+                  <span class="bcase__stat-label">времени<br>на обработку заявок</span>
+                  <span class="bcase__stat-value">–83%</span>
+                </div>
+                <div class="bcase__stat bcase__stat--right">
+                  <span class="bcase__stat-label">невозвратов</span>
+                  <span class="bcase__stat-value">–37%</span>
+                </div>
+                <div class="bcase__stat bcase__stat--right">
+                  <span class="bcase__stat-label">ремонтов</span>
+                  <span class="bcase__stat-value">+16%</span>
+                </div>
+                <div class="bcase__stat bcase__stat--right">
+                  <span class="bcase__stat-label">аренд</span>
+                  <span class="bcase__stat-value">+13%</span>
+                </div>
+              </div>
+            </div>
+            <p class="bcase__title">CRM для аренды и ремонта оборудования</p>
+          </article>
+        </div>
+
+        <div class="cases__row cases__row--1">
+          <!-- case_04 -->
+          <article class="bcase">
+            <div class="bcase__mockup">
+              <picture>
+                <source media="(max-width: 640px)" srcset="assets/bitrix-mob-case3.webp">
+                <source media="(max-width: 1200px)" srcset="assets/bitrix-640-case3.webp">
+                <img class="bcase__img" src="assets/bitrix-case3.webp" alt="CRM для цветочного магазина">
+              </picture>
+              <div class="bcase__stats bcase__stats--row bcase__stats--center">
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">заказов</span>
+                  <span class="bcase__stat-value">+24%</span>
+                </div>
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">задержек</span>
+                  <span class="bcase__stat-value">–34%</span>
+                </div>
+                <div class="bcase__stat">
+                  <span class="bcase__stat-label">времени на реакцию</span>
+                  <span class="bcase__stat-value">–83%</span>
+                </div>
+              </div>
+            </div>
+            <p class="bcase__title">CRM для цветочного магазина</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Yandex.Direct cases group — Figma 20004264:36813 -->
+      <div class="cases__group cases__group--direct" data-category="yandex" hidden>
+        <div class="cases__row cases__row--2">
+          <article class="bcase">
+            <div class="bcase__mockup bcase__mockup--yellow">
+              <picture><source media="(max-width: 640px)" srcset="assets/direct-mob-case1.webp"><source media="(max-width: 1200px)" srcset="assets/direct-640-case1.webp"><img class="bcase__img" src="assets/direct-case1.webp" alt="Аутсорсинг курьерских услуг"></picture>
+              <div class="bcase__plate bcase__plate--yellow bcase__plate--big">
+                <span class="bcase__plate-num">50</span>
+                <span class="bcase__plate-suffix">заявок</span>
+                <span class="bcase__plate-sub">за 3 недели</span>
+              </div>
+              <svg class="bcase__lightning" width="33" height="60" viewBox="0 0 33 60" fill="none" aria-hidden="true">
+                <path d="M19.5 0L0 34h13L9 60l24-36H19l4-24z" fill="#FFB100"/>
+              </svg>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Аутсорсинг курьерских услуг</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Целевая заявка от 200 до 500 ₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup bcase__mockup--violet">
+              <picture><source media="(max-width: 640px)" srcset="assets/direct-mob-case2.webp"><source media="(max-width: 1200px)" srcset="assets/direct-640-case2.webp"><img class="bcase__img" src="assets/direct-case2.webp" alt="Производство сухого льда"></picture>
+              <div class="bcase__plate bcase__plate--top">
+                <span class="bcase__plate-label">увеличение выручки на</span>
+                <span class="bcase__plate-value">146%</span>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Производство сухого льда</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">130 заявок в месяц по 40 рублей</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cases__row cases__row--2 cases__row--reverse">
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup">
+              <picture><source media="(max-width: 640px)" srcset="assets/direct-mob-case3.webp"><source media="(max-width: 1200px)" srcset="assets/direct-640-case3.webp"><img class="bcase__img" src="assets/direct-case3.webp" alt="Сеть фитнес-клубов в Москве"></picture>
+              <div class="bcase__plate bcase__plate--bottom">
+                <span class="bcase__plate-label">заявок в месяц</span>
+                <span class="bcase__plate-value bcase__plate-value--xl">200</span>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Сеть фитнес-клубов в Москве</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">600 лидов с Яндекс Карт</span>
+                <span class="bcase__tag">200 лидов с Яндекс</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bcase">
+            <div class="bcase__mockup bcase__mockup--lilac">
+              <picture><source media="(max-width: 640px)" srcset="assets/direct-mob-case4.webp"><source media="(max-width: 1200px)" srcset="assets/direct-640-case4.webp"><img class="bcase__img" src="assets/direct-case4.webp" alt="Премиум спа-салон"></picture>
+              <div class="bcase__plate bcase__plate--tr">
+                <span class="bcase__plate-label">окупаемость</span>
+                <span class="bcase__plate-value">142%</span>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Премиум спа-салон</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">30 продаж в мес.</span>
+                <span class="bcase__tag">Средний чек — 20 тыс.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Avito cases group — Figma 20004264:36714 -->
+      <div class="cases__group cases__group--avito" data-category="avito" hidden>
+        <div class="cases__row cases__row--2">
+          <article class="bcase">
+            <div class="bcase__mockup bcase__mockup--white">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case1.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case1.webp"><img class="bcase__img" src="assets/avito-case1.webp" alt="Строительство бань"></picture>
+              <div class="bcase__stats bcase__stats--row bcase__stats--bl">
+                <div class="bcase__stat"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">97</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">251 ₽</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">124</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Строительство бань</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case2.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case2.webp"><img class="bcase__img" src="assets/avito-case2.webp" alt="Ремонт коммерческой недвижимости"></picture>
+              <div class="bcase__stats bcase__stats--col bcase__stats--tr">
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">58</span></div>
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">759 ₽</span></div>
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">124</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Ремонт коммерческой недвижимости</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cases__row cases__row--2 cases__row--reverse">
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case3.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case3.webp"><img class="bcase__img" src="assets/avito-case3.webp" alt="Продажа винтовых и ЖБ свай"></picture>
+              <div class="bcase__stats bcase__stats--col bcase__stats--tl">
+                <div class="bcase__stat"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">1 350</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">42 ₽</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">10 542</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Продажа винтовых и ЖБ свай</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bcase">
+            <div class="bcase__mockup bcase__mockup--white">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case4.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case4.webp"><img class="bcase__img" src="assets/avito-case4.webp" alt="Строительство каркасных домов"></picture>
+              <div class="bcase__stats bcase__stats--row bcase__stats--bl">
+                <div class="bcase__stat"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">120</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">268 ₽</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">12</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Строительство каркасных домов</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cases__row cases__row--2">
+          <article class="bcase">
+            <div class="bcase__mockup bcase__mockup--white">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case5.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case5.webp"><img class="bcase__img" src="assets/avito-case5.webp" alt="Наливные полы"></picture>
+              <div class="bcase__stats bcase__stats--row bcase__stats--bl">
+                <div class="bcase__stat"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">155</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">213 ₽</span></div>
+                <div class="bcase__stat"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">83</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Наливные полы</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bcase bcase--narrow">
+            <div class="bcase__mockup">
+              <picture><source media="(max-width: 640px)" srcset="assets/avito-mob-case6.webp"><source media="(max-width: 1200px)" srcset="assets/avito-640-case6.webp"><img class="bcase__img" src="assets/avito-case6.webp" alt="Пластиковые окна"></picture>
+              <div class="bcase__stats bcase__stats--col bcase__stats--tr">
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">заявок получено</span><span class="bcase__stat-value">294</span></div>
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">цена за заявку</span><span class="bcase__stat-value">141 ₽</span></div>
+                <div class="bcase__stat bcase__stat--right"><span class="bcase__stat-label">опубликовано объявлений</span><span class="bcase__stat-value">74</span></div>
+              </div>
+            </div>
+            <div class="bcase__info">
+              <p class="bcase__title">Пластиковые окна</p>
+              <div class="bcase__tags">
+                <span class="bcase__tag">Недвижимость и строительство</span>
+                <span class="bcase__tag">Контекст в Авито</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ STRATEGY — Figma 20005072:2855 ═══ -->
+  <section class="strategy" id="strategy">
+    <div class="container">
+      <div class="strategy__content">
+
+        <!-- 4 corner stars -->
+        <div class="strategy__star strategy__star--tl">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/></svg>
+        </div>
+        <div class="strategy__star strategy__star--tr">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/></svg>
+        </div>
+        <div class="strategy__star strategy__star--bl">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/></svg>
+        </div>
+        <div class="strategy__star strategy__star--br">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/></svg>
+        </div>
+
+        <!-- Title with inline icons -->
+        <h2 class="strategy__title">
+          мы
+          <span class="strategy__title-icon strategy__title-icon--violet">
+            <img src="assets/icons/sort-card.svg" alt="" class="strategy__title-icon-img strategy__title-icon-img--rotated" />
+          </span>
+          Создаём стратегии,
+          <br>которые помогают
+          <span class="strategy__title-icon strategy__title-icon--lime">
+            <svg width="14" height="14" viewBox="0 0 26 26" fill="none"><path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          вашему
+          <br>бизнесу
+          <span class="strategy__title-icon strategy__title-icon--pink">
+            <img src="assets/icons/flame.svg" alt="" class="strategy__title-icon-img" />
+          </span>
+          привлекать
+          <br>больше клиентов
+        </h2>
+
+        <!-- Scattered tags -->
+        <div class="strategy__tags">
+
+          <!-- Tag pills — wrapper div sizes the rotation box, span is the visible pill -->
+          <div class="strategy__tag strategy__tag--yandex"><span>Яндекс Директ</span></div>
+          <div class="strategy__tag strategy__tag--bitrix"><span>Битрикс24</span></div>
+          <div class="strategy__tag strategy__tag--seo"><span>SEO-продвижение</span></div>
+          <div class="strategy__tag strategy__tag--tilda"><span>Продающие сайты на Тильде</span></div>
+          <div class="strategy__tag strategy__tag--crm"><span>CRM-системы</span></div>
+
+          <!-- Icon circles — wrapper div sizes rotation box, inner div is the circle -->
+          <div class="strategy__tag-icon strategy__tag-icon--sort">
+            <div><img src="assets/icons/sort-card.svg" alt="" /></div>
+          </div>
+          <div class="strategy__tag-icon strategy__tag-icon--folder">
+            <div><img src="assets/icons/folder.svg" alt="" /></div>
+          </div>
+          <div class="strategy__tag-icon strategy__tag-icon--share">
+            <div><img src="assets/icons/share.svg" alt="" /></div>
+          </div>
+          <div class="strategy__tag-icon strategy__tag-icon--at"><div>@</div></div>
+          <div class="strategy__tag-icon strategy__tag-icon--hash"><div>#</div></div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE LINE 2 — Figma 20005072:2910 ═══ -->
+  <section class="marquee marquee--dark">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+      </div>
+      <div class="marquee__content" aria-hidden="true">
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ STATS — Figma 20005072:2915 ═══ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__content">
+
+        <!-- Title -->
+        <h2 class="stats__title">
+          команда на рынке
+          <br><span class="stats__title-light">с 2023 года</span>
+        </h2>
+
+        <!-- Decorative circles -->
+        <div class="stats__circle stats__circle--violet"></div>
+        <div class="stats__circle stats__circle--lime"></div>
+        <div class="stats__circle stats__circle--dark"></div>
+
+        <!-- Stat 1: 50+ clients -->
+        <div class="stats__item stats__item--clients">
+          <div class="stats__row">
+            <span class="stats__number">50+</span>
+            <p class="stats__label">Постоянных клиентов<br>и клиентов на ведении</p>
+          </div>
+        </div>
+
+        <!-- Stat 2: 50+ sites -->
+        <div class="stats__item stats__item--sites">
+          <div class="stats__row">
+            <p class="stats__label">Разработанных сайтов<br>и сервисов</p>
+            <span class="stats__number">50+</span>
+          </div>
+        </div>
+
+        <!-- Stat 3: 20+ CRM -->
+        <div class="stats__item stats__item--crm">
+          <div class="stats__row">
+            <span class="stats__number stats__number--white">20+</span>
+            <p class="stats__label">Внедренных<br>CRM-систем</p>
+          </div>
+        </div>
+
+        <!-- Decorative stars -->
+        <div class="stats__star stats__star--tr">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip_stats_star1)">
+            <mask id="mask_stats_star1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="32" height="32">
+            <path d="M32 -1H0V31H32V-1Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask_stats_star1)">
+            <path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip_stats_star1">
+            <rect width="30" height="30" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="stats__star stats__star--bl">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip_stats_star2)">
+            <mask id="mask_stats_star2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="32" height="32">
+            <path d="M32 -1H0V31H32V-1Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask_stats_star2)">
+            <path d="M16 -1L16.9504 14.0496L32 15L16.9504 15.9504L16 31L15.0496 15.9504L0 15L15.0496 14.0496L16 -1Z" fill="#BDBCE0"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip_stats_star2">
+            <rect width="30" height="30" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTACT FORM — Figma 20005072:2945 ═══ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__content">
+
+        <!-- Decorative star -->
+        <div class="contact__star">
+          <img src="assets/contact-star.svg" alt="" />
+        </div>
+
+        <!-- Decorative ribbon -->
+        <div class="contact__ribbon">
+          <img src="assets/form-line.webp" alt="" />
+        </div>
+
+        <!-- Left: text -->
+        <div class="contact__text">
+          <h2 class="contact__title">Напишите<br>нам</h2>
+          <p class="contact__desc">Свяжитесь с нами, и мы предоставим подробную информацию о наших продуктах и услугах</p>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact__form-wrap">
+          <form class="contact__form">
+            <div class="contact__fields">
+              <input type="text" class="contact__input" placeholder="Имя" />
+              <input type="tel" class="contact__input" placeholder="Телефон" />
+              <div class="contact__textarea-group">
+                <textarea class="contact__textarea" placeholder="Комментарий" maxlength="600"></textarea>
+                <span class="contact__counter">0/600</span>
+              </div>
+            </div>
+            <button type="submit" class="contact__submit">
+              <span>отправить</span>
+              <img src="assets/icons/arrow-up-right-lime.svg" alt="" class="contact__submit-icon" />
+            </button>
+          </form>
+
+          <!-- Contact info (visible on tablet/mobile) -->
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <span class="contact__info-label">Связаться в телеграм</span>
+              <a href="https://t.me/belozerovph" class="contact__info-value" target="_blank" rel="noopener noreferrer">@belozerovph</a>
+            </div>
+            <div class="contact__info-item">
+              <span class="contact__info-label">Почта</span>
+              <a href="mailto:nix@agency.ru" class="contact__info-value">nix@agency.ru</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TELEGRAM CTA — Figma 20005079:5612 ═══ -->
+  <section class="telegram-cta">
+    <a href="https://t.me/" class="telegram-cta__link" target="_blank" rel="noopener noreferrer">
+      <div class="telegram-cta__circle">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.4 10.8L26.5 29.2C26.5 29.2 25.9 30.7 24.3 30L16.5 23.8L13.1 22.2L7.5 20.4C7.5 20.4 6.6 20.1 6.5 19.4C6.4 18.7 7.5 18.3 7.5 18.3L28.7 10.2C28.7 10.2 30.4 9.5 30.4 10.8Z" fill="#121313"/>
+          <path d="M15.4 29.3C15.4 29.3 15.1 29.3 14.8 28.2C14.5 27.1 13.1 22.2 13.1 22.2L25.5 14.4C25.5 14.4 26.2 14 26.2 14.4C26.2 14.4 26.2 14.6 25.5 15.2C24.8 15.8 16.6 23.3 16.6 23.3" fill="#121313"/>
+        </svg>
+      </div>
+      <p class="telegram-cta__text">Нажмите, чтобы задать вопрос или&nbsp;обсудить проект</p>
+    </a>
+  </section>
+
+
+  <!-- ═══ FOOTER — Figma 20005072:3115 ═══ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+    <div class="footer__content">
+      <!-- Logo -->
+      <a href="/" class="footer__logo">
+        <img src="assets/logo.svg" alt="NIX" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="footer__menu">
+        <a href="#services" class="footer__menu-link">Услуги</a>
+        <a href="/cases" class="footer__menu-link">Кейсы</a>
+        <a href="/blog" class="footer__menu-link">Блог</a>
+        <a href="/contacts" class="footer__menu-link">Контакты</a>
+      </nav>
+
+      <!-- Services -->
+      <div class="footer__services">
+        <a href="/design" class="footer__services-item">Дизайн и разработка сайтов</a>
+        <a href="/bitrix24" class="footer__services-item">Внедрение Битрикс24</a>
+      </div>
+
+      <!-- Circle badge -->
+      <div class="footer__circle rotating-badge">
+        <img src="assets/digital.png" alt="Digital Agency" />
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__contact">
+        <a href="tel:+79933091207" class="footer__phone">+7 (993) 309-12-07</a>
+        <div class="footer__social">
+          <a href="mailto:info@nixagency.ru" class="footer__social-link">info@nixagency.ru</a>
+          <a href="https://t.me/nix_agency" class="footer__social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://wa.me/79933091207?text=" class="footer__social-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer__divider" />
+
+    <!-- Bottom row -->
+    <div class="footer__bottom">
+      <a href="#" class="footer__bottom-link">Реквизиты</a>
+      <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+      <span class="footer__bottom-link">Сайт разработан агентством NIX</span>
+    </div>
+    </div>
+  </footer>
+
+
+</div>
+
+<!-- ═══ MOBILE MENU OVERLAY (вынесен наружу scale-wrapper: position: fixed не работает внутри transformed-предка) ═══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__inner">
+
+    <!-- Header: logo + close -->
+    <div class="mobile-menu__header">
+      <a href="/" class="mobile-menu__logo">
+        <img src="assets/logo.svg" alt="NIX Agency" />
+      </a>
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Content: nav + contacts -->
+    <div class="mobile-menu__content">
+      <nav class="mobile-menu__nav">
+        <a href="/" class="mobile-menu__link">Главная</a>
+        <a href="#services" class="mobile-menu__link">Услуги</a>
+        <a href="/cases" class="mobile-menu__link">Кейсы</a>
+        <a href="/blog" class="mobile-menu__link">Блог</a>
+        <a href="/contacts" class="mobile-menu__link">Контакты</a>
+      </nav>
+
+      <div class="mobile-menu__contact">
+        <a href="tel:+79933091207" class="mobile-menu__phone">+7 (993) 309-12-07</a>
+        <div class="mobile-menu__social">
+          <a href="mailto:info@nixagency.ru" class="mobile-menu__social-link">info@nixagency.ru</a>
+          <a href="https://t.me/nix_agency" class="mobile-menu__social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://wa.me/79933091207?text=" class="mobile-menu__social-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Circle badge -->
+    <div class="mobile-menu__circle rotating-badge">
+      <img src="assets/digital.png" alt="Digital Agency" />
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Proportional page scaling: mobile (<640), tablet (640-1200), desktop (>1200)
+  var MOBILE_BASE = 320;
+  var MOBILE_MIN_WIDTH = 320;
+  var TABLET_BASE = 640;
+  var DESKTOP_BASE = 1200;
+  var DESKTOP_MAX_SCALE = 1.6;
+
+  function updatePageScale() {
+    var wrapper = document.getElementById('scale-wrapper');
+    if (!wrapper) return;
+
+    var w = window.innerWidth;
+    var root = document.documentElement;
+    var scale, baseWidth;
+
+    if (w < 640) {
+      var effectiveWidth = Math.max(w, MOBILE_MIN_WIDTH);
+      scale = effectiveWidth / MOBILE_BASE;
+      baseWidth = MOBILE_BASE;
+    } else if (w <= 1200) {
+      scale = w / TABLET_BASE;
+      baseWidth = TABLET_BASE;
+    } else {
+      scale = Math.min(w / DESKTOP_BASE, DESKTOP_MAX_SCALE);
+      baseWidth = DESKTOP_BASE;
+    }
+
+    root.style.setProperty('--page-scale', scale);
+    root.style.setProperty('--wrapper-width', baseWidth + 'px');
+
+    var realHeight = wrapper.getBoundingClientRect().height;
+    document.body.style.height = realHeight + 'px';
+  }
+
+  window.addEventListener('load', updatePageScale);
+  window.addEventListener('resize', updatePageScale);
+  if (document.fonts) {
+    document.fonts.ready.then(updatePageScale);
+  }
+
+  // Mobile menu toggle
+  (function() {
+    var burger = document.querySelector('.header__burger');
+    var menu = document.getElementById('mobileMenu');
+    var close = document.querySelector('.mobile-menu__close');
+    var links = document.querySelectorAll('.mobile-menu__link');
+
+    function open() {
+      menu.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function shut() {
+      menu.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    burger.addEventListener('click', open);
+    close.addEventListener('click', shut);
+    links.forEach(function(l) { l.addEventListener('click', shut); });
+  })();
+
+  // Cases tabs filtering
+  document.querySelectorAll('.cases__tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      // Update active tab
+      document.querySelectorAll('.cases__tab').forEach(function(t) {
+        t.classList.remove('cases__tab--active');
+      });
+      this.classList.add('cases__tab--active');
+
+      // Filter cards & groups
+      var filter = this.dataset.filter;
+      document.querySelectorAll('.cases__card').forEach(function(card) {
+        card.hidden = card.dataset.category !== filter;
+      });
+      document.querySelectorAll('.cases__group').forEach(function(g) {
+        g.hidden = g.dataset.category !== filter;
+      });
+      // hide cases__list wrapper if no design cards visible
+      var list = document.querySelector('.cases__list');
+      if (list) list.hidden = filter !== 'design';
+    });
+  });
+</script>
+
+</body>
+</html>

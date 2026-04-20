@@ -1,0 +1,2355 @@
+/*
+ * NIX Agency — Bitrix24 service page
+ * Source: Figma node 20005156:152965 (Desktop 1200px base)
+ */
+
+/* Override ancestors' overflow so position:sticky works on descendants.
+   `clip` visually behaves like `hidden` but does NOT create a scroll container. */
+html,
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.page {
+  overflow: clip;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SERVICE HERO — Figma node 20005156:175127
+   Container gap from header: 40px (header pt 20 + 40)
+   Cards row: gap 8px, h 448px, border-radius 24px
+   ═══════════════════════════════════════════════════════════ */
+.svc-hero {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.svc-hero__row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+
+/* ── Violet content card — Figma 20005156:152981 ────────── */
+.svc-hero__content {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 448px;
+  padding: 50px 40px;
+  background-color: var(--color-violet);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.svc-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title — Unbounded Medium 32px, lh 1.3, uppercase */
+.svc-hero__title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+/* Subtitle — Onest Regular 14px, lh 1.3, tracking -0.14px */
+.svc-hero__subtitle {
+  margin: 0;
+  font-family: var(--font-body-16-family); /* Onest */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.14px;
+  color: var(--color-dark);
+}
+
+
+/* ── Buttons row — Figma 20005156:175128 ────────────────── */
+.svc-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Primary CTA — Figma 20005156:175129 */
+.svc-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+  border-radius: 56px;
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+.svc-hero__cta:hover { opacity: 0.85; }
+
+.svc-hero__cta-short { display: none; }
+
+/* Social buttons — Figma 20005156:175131 */
+.svc-hero__social {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.svc-hero__social-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-dark);
+  border-radius: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+.svc-hero__social-btn:hover { background-color: rgba(18, 19, 19, 0.06); }
+
+.svc-hero__social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Text labels inside social buttons — mobile only */
+.svc-hero__social-info { display: none; }
+
+
+/* ── Dark mockup card — Figma 20005156:175115 ───────────── */
+.svc-hero__mockup {
+  width: 400px;
+  height: 448px;
+  flex-shrink: 0;
+  background-color: var(--color-dark);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.svc-hero__mockup img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   PROBLEMS — Figma node 20005156:153006
+   2 rows × 3 cards (5 problems + 1 CTA tile)
+   Hover на карточке показывает divider и описание (grid trick)
+   ═══════════════════════════════════════════════════════════ */
+.problems {
+  padding: 100px 0;
+}
+
+.problems .container {
+  position: relative;
+}
+
+/* Section title */
+.problems__title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.problems__title-muted {
+  color: var(--color-grey);
+}
+
+/* Decorative star — top-right */
+.problems__star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.problems__star img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Grid: 2 rows of 3 cards */
+.problems__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.problems__row {
+  display: flex;
+  gap: 8px;
+}
+
+/* Card base */
+.problems__card {
+  flex: 1;
+  min-width: 0;
+  height: 380px;
+  padding: 30px 38px 40px;
+  background-color: var(--color-cocane);
+  border-radius: 24px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Icon circle */
+.problems__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.problems__icon--violet { background-color: var(--color-violet); }
+.problems__icon--pink   { background-color: var(--color-pink); }
+.problems__icon--orange { background-color: var(--color-orange); }
+
+.problems__icon-img {
+  width: 22px;
+  height: 22px;
+}
+
+.problems__icon-img--rotated {
+  transform: rotate(90deg);
+}
+
+/* Card body */
+.problems__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.problems__num {
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-grey);
+}
+
+.problems__card-title {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+/* Reveal (hover) — grid height trick */
+.problems__reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.problems__card:hover .problems__reveal {
+  grid-template-rows: 1fr;
+}
+
+.problems__reveal-inner {
+  overflow: hidden;
+}
+
+.problems__divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(18, 19, 19, 0.15);
+  margin: 16px 0 0;
+}
+
+.problems__desc {
+  margin: 0;
+  padding-top: 16px;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: rgba(18, 19, 19, 0.7);
+}
+
+
+/* ── CTA tile (lime) ─────────────────────────────────────── */
+.problems__card--cta {
+  background-color: var(--color-lime);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.problems__card--cta:hover {
+  background-color: #B9FF49;
+}
+
+.problems__cta-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.problems__cta-icon img {
+  width: 22px;
+  height: 22px;
+  transition: filter 0.3s ease;
+}
+
+.problems__card--cta:hover .problems__cta-icon {
+  background-color: var(--color-dark);
+}
+
+.problems__card--cta:hover .problems__cta-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.problems__cta-text {
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.45;
+  letter-spacing: 0.18px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   BENEFITS — Figma node 20005156:153072
+   Violet-bg section with 3 rows × 2 cards (last is dark quote)
+   ═══════════════════════════════════════════════════════════ */
+.benefits {
+  background-color: var(--color-violet);
+  padding: 100px 0;
+}
+
+.benefits .container {
+  position: relative;
+}
+
+.benefits__title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.benefits__title-muted {
+  color: var(--color-grey);
+}
+
+.benefits__star {
+  position: absolute;
+  top: 7px;
+  left: 610px;
+  width: 30px;
+  height: 30px;
+}
+
+.benefits__star img {
+  width: 100%;
+  height: 100%;
+}
+
+.benefits__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.benefits__row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.benefits__card {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--color-cocane);
+  border-radius: 24px;
+  padding: 30px 32px 40px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefits__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.benefits__num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--color-dark);
+  flex-shrink: 0;
+}
+
+.benefits__card-title {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.benefits__divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(18, 19, 19, 0.15);
+  margin: 0;
+}
+
+.benefits__list {
+  list-style: disc;
+  padding-left: 21px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--color-dark);
+  font-family: var(--font-body-16-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+
+/* Dark quote card */
+.benefits__card--dark {
+  position: relative;
+  background-color: var(--color-dark);
+  padding: 30px 32px 40px;
+  justify-content: center;
+  gap: 32px;
+}
+
+.benefits__quote {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family); /* Unbounded */
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.16px;
+  color: var(--color-cocane);
+}
+
+.benefits__quote-accent {
+  color: #8D8AFF;
+}
+
+.benefits__quote-star {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  width: 19.55px;
+  height: 26px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   PROCESS — Figma node 20005156:153144
+   Left sticky title, right column of 6 cards + CTA
+   ═══════════════════════════════════════════════════════════ */
+.process {
+  background-color: var(--color-neutral);
+  padding: 100px 0;
+}
+
+.process__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Title column — JS-driven sticky (handled in inline script because
+   CSS position:sticky is unreliable inside the scaled #scale-wrapper) */
+.process__title-wrap {
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  will-change: transform;
+}
+
+.process__title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.process__star {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.process__star img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Right column */
+.process__right {
+  width: 500px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.process__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.process__card {
+  background-color: var(--color-cocane);
+  border: 1px solid var(--color-pink);
+  border-radius: 24px;
+  padding: 30px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.process__num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--color-dark);
+  flex-shrink: 0;
+}
+
+.process__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.process__card-title {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.process__divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(18, 19, 19, 0.15);
+  margin: 0;
+}
+
+.process__desc {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+.process__list {
+  list-style: disc;
+  padding-left: 21px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--color-dark);
+  font-family: var(--font-body-16-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* CTA button with 🔥 emoji */
+.process__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 24px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+  border-radius: 56px;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+.process__cta:hover { opacity: 0.85; }
+
+.process__cta-emoji {
+  position: absolute;
+  top: -14px;
+  right: 28px;
+  font-size: 22px;
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   PRICING — Figma node 20005156:153213
+   Dark section with 3 tariff cards (lime / pink / violet)
+   Per-tariff colors are set via CSS custom properties.
+   ═══════════════════════════════════════════════════════════ */
+.pricing {
+  background-color: var(--color-dark);
+  padding: 100px 0;
+}
+
+.pricing__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-cocane);
+}
+
+.pricing__title-star {
+  width: 21px;
+  height: 27px;
+}
+
+.pricing__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+/* ── Tariff card (colored wrapper with 2 cols) ────────────── */
+.pricing__tariff {
+  background-color: var(--tariff-bg);
+  border-radius: 40px;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.pricing__tariff--lime   { --tariff-bg: #CCFF7A; --tariff-pill: #CCFF7A; --tariff-accent: #89DF00; }
+.pricing__tariff--pink   { --tariff-bg: #FEBEE7; --tariff-pill: #FEBEE7; --tariff-accent: #FF49BE; }
+.pricing__tariff--violet { --tariff-bg: #C7C5FF; --tariff-pill: #C7C5FF; --tariff-accent: #514DF9; }
+
+
+/* ── Left column (summary + cta buttons) ─────────────────── */
+.pricing__left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 480px;
+  flex-shrink: 0;
+}
+
+.pricing__summary {
+  position: relative;
+  background-color: var(--color-cocane);
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Title pill */
+.pricing__name-pill {
+  background-color: var(--tariff-pill);
+  border-radius: 200px;
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pricing__name-pill span {
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.26px;
+  color: var(--color-dark);
+}
+
+.pricing__term {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pricing__term-label {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.14px;
+  color: var(--color-dark);
+}
+
+.pricing__term-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background-color: var(--color-neutral);
+  border-radius: 32px;
+  align-self: flex-start;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12px;
+  color: var(--color-dark);
+}
+
+.pricing__divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(18, 19, 19, 0.15);
+  margin: 0;
+}
+
+.pricing__price {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--tariff-accent);
+}
+
+/* Бонусы badge — tilted */
+.pricing__bonus {
+  position: absolute;
+  right: 30px;
+  bottom: 76px;
+  width: 80px;
+  height: 90px;
+  background-color: #CCFF7A;
+  border: 2px dashed var(--color-dark);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(8deg);
+  box-shadow: 0 0 0 0.5px #89DF00;
+}
+
+.pricing__bonus-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing__bonus-icon img {
+  width: 13px;
+  height: 13px;
+}
+
+.pricing__bonus span {
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+/* Two CTA buttons */
+.pricing__cta {
+  background-color: var(--color-cocane);
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  gap: 12px;
+}
+
+.pricing__cta-btn {
+  flex: 1;
+  border: 1px solid var(--tariff-accent);
+  border-radius: 24px;
+  padding: 16px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+.pricing__cta-btn:hover { background-color: rgba(0, 0, 0, 0.03); }
+
+.pricing__cta-btn:first-child { max-width: 200px; }
+
+/* 3rd bonus button visible only on mobile */
+.pricing__cta-btn--bonus { display: none; }
+
+.pricing__cta-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.pricing__cta-btn span {
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.pricing__cta-btn em {
+  font-style: normal;
+  color: var(--tariff-accent);
+}
+
+
+/* ── Right column (included features) ────────────────────── */
+.pricing__included {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--color-cocane);
+  border-radius: 32px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pricing__included-title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.16px;
+  color: var(--color-dark);
+}
+
+.pricing__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.pricing__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.pricing__check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--tariff-accent);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M6 12.5l4 4 8-9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  margin-top: 2px;
+}
+
+.pricing__feature-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pricing__feature-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pricing__feature-head strong {
+  font-family: var(--font-body-16-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.16px;
+  color: var(--color-dark);
+}
+
+.pricing__feature-meta {
+  font-family: var(--font-body-16-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.12px;
+  color: var(--color-grey);
+}
+
+.pricing__feature-body p {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.12px;
+  color: var(--color-dark);
+}
+
+.pricing__sub {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.12px;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   POPUP — Figma node 20005156:153881
+   Modal with per-tariff accent color via --popup-accent
+   ═══════════════════════════════════════════════════════════ */
+.popup {
+  --popup-accent: #89DF00;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.popup.is-open {
+  display: flex;
+}
+
+.popup__backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.popup__frame {
+  position: relative;
+  background-color: var(--color-neutral);
+  border: 5px solid var(--popup-accent);
+  border-radius: 32px;
+  padding: 80px 60px;
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+.popup__close {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-cocane);
+  color: var(--color-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.popup__close:hover { background-color: var(--color-neutral); }
+
+.popup__content {
+  position: relative;
+  background-color: var(--color-dark);
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.popup__head {
+  position: relative;
+}
+
+.popup__title {
+  margin: 0;
+  font-family: var(--font-mobile-h2-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-cocane);
+}
+
+.popup__title-star {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 21px;
+  height: 27px;
+}
+
+.popup__title-accent {
+  color: var(--popup-accent);
+}
+
+/* Narrower variant for Бонусы */
+.popup--narrow .popup__frame {
+  max-width: 520px;
+}
+
+.popup__content--narrow {
+  width: 100%;
+}
+
+.popup__bonuses {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup__bonus {
+  background-color: var(--bonus-bg);
+  border-radius: 32px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup__bonus--lime   { --bonus-bg: #C2FF61; }
+.popup__bonus--pink   { --bonus-bg: #FEBEE7; }
+.popup__bonus--violet { --bonus-bg: #D7D6FF; }
+
+.popup__bonus-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 20px;
+  color: var(--color-dark);
+}
+
+.popup__bonus-emoji {
+  font-size: 24px;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.popup__bonus-head p {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.16px;
+}
+
+.popup__bonus-body {
+  background-color: var(--color-cocane);
+  border: 5px solid var(--bonus-bg);
+  border-radius: 32px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.popup__bonus-body p {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.12px;
+  color: var(--color-dark);
+}
+
+/* Make bonus badge behave like a button */
+.pricing__bonus {
+  cursor: pointer;
+  font-family: inherit;
+}
+.pricing__bonus:hover { filter: brightness(0.97); }
+
+.popup__card {
+  background-color: var(--color-cocane);
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.popup__check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M5 12.5l4.5 4.5L19 7.5' stroke='%2389DF00' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 2px;
+}
+
+/* Swap check stroke color per accent */
+.popup[style*="--popup-accent: #FF49BE"] .popup__check {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M5 12.5l4.5 4.5L19 7.5' stroke='%23FF49BE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+.popup[style*="--popup-accent: #514DF9"] .popup__check {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M5 12.5l4.5 4.5L19 7.5' stroke='%23514DF9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.popup__item-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.popup__item-body strong {
+  font-family: var(--font-body-16-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.16px;
+  color: var(--color-dark);
+}
+
+.popup__item-body p {
+  margin: 0;
+  font-family: var(--font-body-16-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.12px;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CONTACT CTA — Figma node 20005156:153787
+   Violet card with a title + «Оставить заявку» + tag composition.
+   Tags are positioned absolutely inside a 588×218 canvas; each
+   rotated element uses the wrapper-approach (outer wrapper holds
+   absolute position + size, inner rotated child holds the pill).
+   ═══════════════════════════════════════════════════════════ */
+.contact-cta {
+  padding: 100px 0;
+}
+
+.contact-cta__card {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  padding: 50px;
+  background-color: var(--color-violet);
+  border-radius: 32px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact-cta__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-cta__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-cta__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-dark);
+  text-transform: uppercase;
+}
+
+.contact-cta__title span {
+  color: #514df9;
+}
+
+.contact-cta__subtitle {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.34;
+  letter-spacing: 0.14px;
+  color: #151923;
+}
+
+.contact-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 24px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+  border: 0;
+  border-radius: 56px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.contact-cta__btn:hover { opacity: 0.85; }
+
+/* Tag composition canvas: 588×218, pinned to card's right edge */
+.contact-cta__tags {
+  position: absolute;
+  top: 91.86px;
+  right: 0;
+  width: 588px;
+  height: 218px;
+  z-index: 1;
+}
+
+/* Pills (rounded rectangles with rotated text) */
+.contact-cta__pill {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-cta__pill > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15.099px 22.649px;
+  background-color: var(--color-cocane);
+  border: 1px solid var(--color-dark);
+  border-radius: 30.198px;
+  font-family: 'Onest', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+/* Per-pill position + rotation */
+.contact-cta__pill--funnel   { left: 102.6px; top: 0.65px;  width: 197.292px; height: 152.436px; }
+.contact-cta__pill--funnel   > span { transform: rotate(-32.16deg); padding: 15.727px 23.591px; border-radius: 31.455px; font-size: 18.644px; }
+
+.contact-cta__pill--clients  { left: 309px;   top: 33.14px; width: 128.652px; height: 80.607px; }
+.contact-cta__pill--clients  > span { transform: rotate(14.07deg); }
+
+.contact-cta__pill--auto     { left: 321px;   top: 62.14px; width: 192.98px;  height: 164.393px; }
+.contact-cta__pill--auto     > span { transform: rotate(-36.05deg); padding: 19.963px 29.944px; border-radius: 39.926px; }
+
+.contact-cta__pill--tasks    { left: 224px;   top: 102.14px; width: 119.568px; height: 83.502px; }
+.contact-cta__pill--tasks    > span { transform: rotate(17.47deg); padding: 15.184px 22.776px; border-radius: 30.368px; }
+
+.contact-cta__pill--deals    { left: 111px;   top: 138.14px; width: 133.51px;  height: 82.535px; }
+.contact-cta__pill--deals    > span { transform: rotate(9.43deg); padding: 19.963px 29.944px; border-radius: 39.926px; }
+
+.contact-cta__pill--requests { left: 493px;   top: 65.14px;  width: 106.281px; height: 116.979px; }
+.contact-cta__pill--requests > span { transform: rotate(60.19deg); }
+
+.contact-cta__pill--crm      { left: 468px;   top: 137.14px; width: 100.526px; height: 90.076px; }
+.contact-cta__pill--crm      > span { transform: rotate(31.69deg); }
+
+/* Small round badges */
+.contact-cta__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-cta__badge > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50.061px;
+  height: 50.061px;
+  border-radius: 50%;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-cta__badge--folder { left: 419px; top: 22.14px;  width: 62.497px; height: 62.497px; }
+.contact-cta__badge--folder > span { transform: rotate(-16.98deg); background-color: var(--color-dark); }
+.contact-cta__badge--folder img { width: 21.978px; height: 21.978px; filter: invert(1) brightness(2); }
+
+.contact-cta__badge--share  { left: 325px; top: 92.14px;  width: 60.094px; height: 60.094px; }
+.contact-cta__badge--share  > span { transform: rotate(-13.08deg); background-color: var(--color-lime); border: 1px solid var(--color-dark); }
+.contact-cta__badge--share  img { width: 25.641px; height: 25.641px; }
+
+.contact-cta__badge--at     { left: 236px; top: 160px;    width: 63.564px; height: 63.564px; }
+.contact-cta__badge--at     > span { transform: rotate(-17.48deg); background-color: var(--color-dark); color: var(--color-cocane); font-size: 21.944px; width: 50.679px; height: 50.679px; }
+
+.contact-cta__badge--hash   { left: 425px; top: 162.06px; width: 59.995px; height: 59.995px; }
+.contact-cta__badge--hash   > span { transform: rotate(11.68deg); background-color: var(--color-pink); border: 1px solid var(--color-dark); font-family: 'Unbounded', sans-serif; font-size: 22.871px; color: var(--color-dark); width: 50.77px; height: 50.77px; }
+
+/* Stand-alone lime phone icon */
+.contact-cta__phone {
+  position: absolute;
+  left: 254px;
+  top: 64px;
+  width: 50.328px;
+  height: 50.328px;
+  pointer-events: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ — Figma node 20005189:234689
+   Two-column layout: sticky title on the left, accordion list
+   on the right. Built on native <details>/<summary>; JS keeps
+   only one item open at a time.
+   ═══════════════════════════════════════════════════════════ */
+.faq {
+  padding-top: 100px;
+}
+
+.faq__row {
+  display: flex;
+  gap: 180px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.faq__heading {
+  position: relative;
+  width: 217px;
+  flex-shrink: 0;
+}
+
+.faq__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-dark);
+  text-transform: uppercase;
+}
+
+/* Decorative plus/star in the gap between title and list.
+   Figma: absolute left 300px top 52.86px from FAQ frame's border box
+   (frame has px-[60px] + container has 60px padding → 60 to 60 of
+   section's content equals offset from container's left edge). */
+.faq__star {
+  position: absolute;
+  left: 240px;  /* 300px from section edge = 240px from container edge */
+  top: 52.86px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.faq__list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq__item {
+  background-color: var(--color-cocane);
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+
+.faq__item[open] {
+  padding-bottom: 32px;
+}
+
+.faq__question {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  user-select: none;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question > span {
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  color: var(--color-dark);
+}
+
+.faq__chevron {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq__item[open] .faq__chevron {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  padding-top: 12px;
+}
+
+.faq__answer p {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE — max-width: 1199px  (Figma base 320px)
+   На странице /bitrix24 нет планшетного макета 640px,
+   поэтому мобильная вёрстка растягивается от 320 до 1200.
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+
+  /* ── Layout ── */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding-top: 16px;
+  }
+
+  /* ── Service Hero — Figma 20005156:175257 ── */
+  .svc-hero {
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+
+  /* Stack: mockup on top, violet content below (gap 8px) */
+  .svc-hero__row {
+    flex-direction: column-reverse;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  /* Violet content card */
+  .svc-hero__content {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 40px;
+    justify-content: flex-start;
+  }
+
+  /* Mockup card also shouldn't flex */
+  .svc-hero__mockup {
+    flex: none;
+  }
+
+  .svc-hero__text {
+    gap: 16px;
+  }
+
+  .svc-hero__title {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .svc-hero__subtitle {
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.26px;
+  }
+
+  /* Buttons column: CTA full-width on top, two social below */
+  .svc-hero__actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .svc-hero__cta {
+    width: 100%;
+    justify-content: center;
+  }
+  .svc-hero__cta-full { display: none; }
+  .svc-hero__cta-short { display: inline; }
+
+  /* Social — two buttons side by side with labels */
+  .svc-hero__social {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .svc-hero__social-btn {
+    flex: 1;
+    width: auto;
+    height: 48px;
+    padding: 8px 10px 8px 7px;
+    border-width: 0.887px;
+    border-radius: 50px;
+    gap: 3px;
+    justify-content: flex-start;
+  }
+
+  .svc-hero__social-btn img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .svc-hero__social-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    color: var(--color-dark);
+    white-space: nowrap;
+  }
+
+  .svc-hero__social-sub {
+    font-family: var(--font-body-16-family);
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.3;
+  }
+
+  .svc-hero__social-name {
+    font-family: var(--font-mobile-h2-family);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+  }
+
+  /* Dark mockup card — Figma: 288×240, композиция целиком видна.
+     Asset 800×847 выше чем шире → фитим по высоте, центрируем по горизонтали. */
+  .svc-hero__mockup {
+    width: 100%;
+    height: 240px;
+  }
+
+  .svc-hero__mockup img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+
+  /* ── Problems — Figma 20005156:175366 ── */
+  .problems {
+    padding: 60px 0;
+  }
+
+  .problems__title {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  /* Декоративная звёздочка скрыта на мобильной */
+  .problems__star { display: none; }
+
+  .problems__grid {
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  /* Row-обёртки превращаем в "прозрачные" — все 6 карточек выстраиваются
+     в одну колонку в .problems__grid */
+  .problems__row {
+    display: contents;
+  }
+
+  .problems__card {
+    width: 100%;
+    height: auto;
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .problems__icon-img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .problems__body {
+    gap: 16px;
+    margin-top: 0;
+  }
+
+  /* Num + title по Figma с gap 12, но body gap 16 — компенсируем через negative margin */
+  .problems__num {
+    font-size: 14px;
+    margin-bottom: -4px;
+  }
+
+  .problems__card-title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  /* Анимация выезжающего текста отключается — описание и разделитель всегда видимы */
+  .problems__reveal {
+    grid-template-rows: 1fr;
+    transition: none;
+  }
+
+  .problems__divider {
+    margin: 0;
+  }
+
+  .problems__desc {
+    padding-top: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--color-dark);
+  }
+
+  /* CTA tile — h 200, space-between, icon 50×50, text 18 uppercase */
+  .problems__card--cta {
+    height: 200px;
+    padding: 24px;
+    justify-content: space-between;
+  }
+
+  .problems__cta-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .problems__cta-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .problems__cta-text {
+    font-size: 18px;
+  }
+
+
+  /* ── Benefits — Figma 20005163:189325 ── */
+  .benefits {
+    padding: 60px 0;
+  }
+
+  .benefits__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .benefits__star {
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+
+  .benefits__grid {
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  /* Все 6 карточек в одну колонку */
+  .benefits__row {
+    display: contents;
+  }
+
+  .benefits__card {
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  /* head-обёртка "раскрывается" — num и title становятся прямыми детьми card */
+  .benefits__head {
+    display: contents;
+  }
+
+  /* num ↔ title по Figma gap 32: card gap 12 + margin-bottom 20 */
+  .benefits__num {
+    margin-bottom: 20px;
+  }
+
+  .benefits__card-title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .benefits__list {
+    font-size: 12px;
+    gap: 8px;
+    padding-left: 18px;
+  }
+
+  /* Dark quote card */
+  .benefits__card--dark {
+    padding: 20px 16px;
+    gap: 32px;
+  }
+
+  .benefits__quote {
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -0.16px;
+  }
+
+  .benefits__quote-star { display: none; }
+
+
+  /* ── Process — Figma 20005164:189472 ── */
+  .process {
+    padding: 60px 0;
+  }
+
+  /* Layout: column — title на всю ширину, карточки ниже */
+  .process__layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Disable JS-sticky behavior on mobile — заголовок статичный */
+  .process__title-wrap {
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+    transform: none !important;
+  }
+
+  .process__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .process__star {
+    margin-top: 0;
+  }
+
+  /* Right column — full width, без align:center */
+  .process__right {
+    width: 100%;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .process__cards {
+    gap: 8px;
+  }
+
+  .process__card {
+    padding: 20px 16px;
+    gap: 32px;
+  }
+
+  .process__body {
+    gap: 12px;
+  }
+
+  .process__card-title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .process__desc,
+  .process__list {
+    font-size: 12px;
+  }
+
+  .process__list {
+    gap: 12px;
+    padding-left: 18px;
+  }
+
+
+  /* ── Pricing — Figma 20005164:190200 ── */
+  .pricing {
+    padding: 60px 0;
+  }
+
+  .pricing__title {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .pricing__list {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  /* Tariff wrapper: column layout, padding 8, border-radius 24 */
+  .pricing__tariff {
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 24px;
+  }
+
+  /* Left column — full width, gap 8 */
+  .pricing__left {
+    width: 100%;
+    gap: 8px;
+  }
+
+  /* Summary card: padding 20, rounded 20, gap 32 */
+  .pricing__summary {
+    padding: 20px;
+    border-radius: 20px;
+    gap: 32px;
+  }
+
+  .pricing__name-pill {
+    width: 100%;
+    padding: 20px 12px;
+  }
+
+  .pricing__name-pill span {
+    font-size: 18px;
+    letter-spacing: 0.18px;
+  }
+
+  .pricing__term-label {
+    font-size: 12px;
+    letter-spacing: -0.12px;
+  }
+
+  .pricing__term-pill {
+    padding: 10px 24px;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+  }
+
+  .pricing__divider { display: none; }
+
+  .pricing__price {
+    font-size: 24px;
+  }
+
+  /* Bonus sticker — прячется на мобильной */
+  .pricing__bonus { display: none; }
+
+  /* CTA row: горизонтальный скролл, 3 кнопки фиксированной ширины */
+  .pricing__cta {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pricing__cta::-webkit-scrollbar { display: none; }
+
+  .pricing__cta-btn {
+    flex: 0 0 118px;
+    max-width: none;
+    padding: 12px;
+    gap: 20px;
+    border: none;
+    background-color: var(--color-cocane);
+    border-radius: 24px;
+    justify-content: center;
+  }
+
+  .pricing__cta-btn:first-child { max-width: none; }
+
+  /* 3-я "Бонусы" — чуть уже первых, торчит за правый край чтобы показать скролл */
+  .pricing__cta-btn--bonus { flex-basis: 100px; }
+
+  /* Показать bonus-кнопку как 3-ю в ряду */
+  .pricing__cta-btn--bonus { display: flex; }
+
+  .pricing__cta-icon {
+    /* свопаем sparkle → arrow-up-right через content */
+    content: url('../assets/icons/arrow-up-right.svg');
+    width: 30px;
+    height: 30px;
+  }
+
+  .pricing__cta-btn span {
+    font-size: 10px;
+    letter-spacing: 0.1px;
+  }
+
+  /* Included block — кликабельная строка "Что входит", открывает popup */
+  .pricing__included {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-radius: 20px;
+    gap: 16px;
+    cursor: pointer;
+  }
+
+  .pricing__included-title {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+  }
+
+  .pricing__features { display: none; }
+
+  /* === Попап "Что входит" — мобильный дизайн по Figma 20005165:191019 === */
+  #popupIncluded .popup__frame {
+    background-color: var(--color-cocane);
+    border: none;
+    border-radius: 20px;
+    padding: 20px 16px;
+    max-width: 320px;
+  }
+
+  #popupIncluded .popup__content {
+    background-color: transparent;
+    padding: 0;
+    gap: 24px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  #popupIncluded .popup__title {
+    font-family: var(--font-mobile-h2-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.14px;
+    text-transform: none;
+    color: var(--color-dark);
+  }
+
+  #popupIncluded .popup__close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7.5px;
+    background-color: var(--color-cocane);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  #popupIncluded .popup__close svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #popupIncluded .popup__card {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  #popupIncluded .pricing__features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #popupIncluded .pricing__feature {
+    gap: 16px;
+    align-items: center;
+  }
+
+  #popupIncluded .pricing__feature-body {
+    gap: 6px;
+  }
+
+  #popupIncluded .pricing__feature-head strong {
+    font-size: 14px;
+    letter-spacing: -0.14px;
+  }
+
+  #popupIncluded .pricing__feature-body p,
+  #popupIncluded .pricing__feature-meta,
+  #popupIncluded .pricing__sub {
+    font-size: 10px;
+    letter-spacing: -0.1px;
+  }
+
+  #popupIncluded .pricing__check {
+    background-image: none;
+    background-color: var(--popup-accent);
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M6 12.5l4 4 8-9' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+            mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M6 12.5l4 4 8-9' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-size: contain;
+            mask-size: contain;
+    margin-top: 0;
+  }
+
+  /* Стрелочка справа от заголовка */
+  .pricing__included::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    background: url('../assets/icons/arrow-up-right.svg') center/contain no-repeat;
+  }
+
+  /* === Попапы "Что вы получаете" / "Что сможете делать с Битрикс24" — мобильный === */
+  #popupReceived .popup__frame,
+  #popupBitrix .popup__frame {
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 24px;
+    padding: 20px 12px;
+    max-width: 320px;
+  }
+
+  #popupReceived .popup__content,
+  #popupBitrix .popup__content {
+    background-color: transparent;
+    padding: 0;
+    gap: 30px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  #popupReceived .popup__title,
+  #popupBitrix .popup__title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  #popupReceived .popup__title-star,
+  #popupBitrix .popup__title-star,
+  #popupBonus .popup__title-star { display: none; }
+
+  #popupReceived .popup__close,
+  #popupBitrix .popup__close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  #popupReceived .popup__close svg,
+  #popupBitrix .popup__close svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #popupReceived .popup__card,
+  #popupBitrix .popup__card {
+    padding: 20px 12px;
+    border-radius: 24px;
+    gap: 20px;
+  }
+
+  #popupReceived .popup__item,
+  #popupBitrix .popup__item {
+    align-items: center;
+    gap: 16px;
+  }
+
+  #popupReceived .popup__check,
+  #popupBitrix .popup__check {
+    margin-top: 0;
+  }
+
+  #popupReceived .popup__item-body,
+  #popupBitrix .popup__item-body {
+    gap: 6px;
+  }
+
+  #popupReceived .popup__item-body p,
+  #popupBitrix .popup__item-body p {
+    font-size: 10px;
+    letter-spacing: -0.1px;
+  }
+
+  /* === Попап "Бонусы" — мобильный (Figma 20005219:64383) === */
+  #popupBonus .popup__frame {
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 24px;
+    padding: 20px 12px;
+    max-width: 320px;
+  }
+
+  #popupBonus .popup__content {
+    background-color: transparent;
+    padding: 0;
+    gap: 30px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  #popupBonus .popup__title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  #popupBonus .popup__close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  #popupBonus .popup__close svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #popupBonus .popup__bonus { border-radius: 24px; }
+
+  /* === Contact CTA — мобильный (Figma 20005219:63722) ===
+     Карточка 420h, теги — композиция 353×131 в нижнем левом углу. */
+  .contact-cta { padding: 60px 0; }
+
+  .contact-cta__card {
+    height: 420px;
+    padding: 20px 16px 0;
+    border-radius: 20px;
+  }
+
+  .contact-cta__content {
+    height: auto;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+
+  .contact-cta__title { font-size: 20px; line-height: 1.2; }
+
+  .contact-cta__tags {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: -65.49px;
+    width: 353.339px;
+    height: 131px;
+  }
+
+  /* Pills (rotated text buttons) */
+  .contact-cta__pill > span {
+    padding: 9.073px 13.61px;
+    border-radius: 18.147px;
+    font-size: 10.817px;
+  }
+
+  .contact-cta__pill--funnel   { left: 66.65px;  top: -1.39px;   width: 117.706px; height: 90.851px; }
+  .contact-cta__pill--funnel   > span { transform: rotate(-31.16deg); padding: 9.451px 14.176px; border-radius: 18.902px; font-size: 11.204px; }
+
+  .contact-cta__pill--clients  { left: 189.29px; top: 18.11px;  width: 76.899px;  height: 48.498px; }
+
+  .contact-cta__pill--auto     { left: 199.89px; top: 35.14px;  width: 116.134px; height: 98.977px; }
+  .contact-cta__pill--auto     > span { transform: rotate(-36.05deg); padding: 11.996px 17.994px; border-radius: 23.992px; }
+
+  .contact-cta__pill--tasks    { left: 138.21px; top: 61.38px;  width: 72.04px;   height: 50.391px; }
+  .contact-cta__pill--tasks    > span { padding: 9.124px 13.686px; border-radius: 18.249px; }
+
+  .contact-cta__pill--deals    { left: 66.7px;   top: 83.01px;  width: 80.199px;  height: 49.763px; }
+  .contact-cta__pill--deals    > span { padding: 11.996px 17.994px; border-radius: 23.992px; }
+
+  .contact-cta__pill--requests { left: 301.05px; top: 35.14px;  width: 64.215px;  height: 70.678px; }
+  .contact-cta__pill--requests > span { transform: rotate(75.19deg); }
+
+  .contact-cta__pill--crm      { left: 281.23px; top: 82.41px;  width: 60.471px;  height: 54.261px; }
+
+  /* Round badges */
+  .contact-cta__badge > span { width: 30.083px; height: 30.083px; }
+
+  .contact-cta__badge--folder { left: 256.99px; top: 12.3px;  width: 37.556px; height: 37.556px; }
+  .contact-cta__badge--folder img { width: 13.207px; height: 13.207px; }
+
+  .contact-cta__badge--share  { left: 197.1px;  top: 53.56px; width: 36.112px; height: 36.112px; }
+  .contact-cta__badge--share  img { width: 15.408px; height: 15.408px; }
+
+  .contact-cta__badge--at     { left: 141.82px; top: 96.15px; width: 38.197px; height: 38.197px; }
+  .contact-cta__badge--at     > span { font-size: 13.187px; width: 30.454px; height: 30.454px; }
+
+  .contact-cta__badge--hash   { left: 255.39px; top: 97.38px; width: 36.052px; height: 36.052px; }
+  .contact-cta__badge--hash   > span { font-size: 13.743px; width: 30.508px; height: 30.508px; }
+
+  .contact-cta__phone {
+    left: 156.84px;
+    top: 37.26px;
+    width: 30.243px;
+    height: 30.243px;
+  }
+
+  /* === FAQ — мобильный (Figma 20005219:63785) === */
+  .faq { padding-top: 60px; }
+
+  .faq__row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .faq__heading { width: 100%; }
+
+  .faq__title { font-size: 26px; line-height: 1.15; }
+
+  .faq__star {
+    left: auto;
+    right: 53px;
+    top: 14px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .faq__list { width: 100%; gap: 8px; }
+
+  .faq__item {
+    border-radius: 20px;
+    padding: 20px 16px;
+  }
+
+  .faq__item[open] { padding-bottom: 20px; }
+
+  /* === Telegram CTA — мобильный (Figma 20005156:177156) === */
+  .telegram-cta { padding: 60px; }
+
+  .telegram-cta__circle { width: 100px; height: 100px; }
+
+  .telegram-cta__circle img,
+  .telegram-cta__circle svg { width: 33px; height: 33px; }
+
+  .telegram-cta__text { font-size: 14px; }
+}

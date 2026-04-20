@@ -1,0 +1,1794 @@
+/*
+ * NIX Agency — Design service page
+ * Source: Figma node 20005168:191980 (Desktop 1200px base)
+ */
+
+html,
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.page {
+  overflow: clip;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   HERO — Figma 20005168:191999
+   Lime content card (flex:1) + dark mockup card (400px)
+   Row gap 8px, h 448px, radius 24px
+   ═══════════════════════════════════════════════════════════ */
+.dsn-hero {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.dsn-hero__row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+
+/* ── Lime content card — Figma 20005168:192000 ─────────── */
+.dsn-hero__content {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 448px;
+  padding: 50px 40px;
+  background-color: var(--color-lime);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.dsn-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title — Unbounded Medium 32px, lh 1.3, uppercase */
+.dsn-hero__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+/* Subtitle — Onest Regular 14px, lh 1.3, tracking -0.14px */
+.dsn-hero__subtitle {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.14px;
+  color: var(--color-dark);
+}
+
+
+/* ── Actions row — Figma 20005168:192004 ──────────────── */
+.dsn-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Primary CTA (dark pill) */
+.dsn-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+  border-radius: 56px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+.dsn-hero__cta:hover { opacity: 0.85; }
+.dsn-hero__cta-short { display: none; }
+.dsn-hero__social-info { display: none; }
+
+/* Social icon buttons — outline dark, icon-only */
+.dsn-hero__social {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.dsn-hero__social-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-dark);
+  border-radius: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+.dsn-hero__social-btn img {
+  width: 32px;
+  height: 32px;
+}
+.dsn-hero__social-btn:hover {
+  background-color: var(--color-dark);
+}
+.dsn-hero__social-btn:hover img {
+  filter: invert(1);
+}
+
+
+/* ── Dark mockup card — Figma 20005168:204943 ─────────── */
+.dsn-hero__mockup {
+  position: relative;
+  width: 400px;
+  height: 448px;
+  flex-shrink: 0;
+  background-color: var(--color-dark);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Hero image fills the dark card */
+.dsn-hero__mockup-img {
+  position: absolute;
+  inset: 0;
+}
+.dsn-hero__mockup-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Floating badges — white pills, rotated */
+.dsn-hero__badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-cocane);
+  border-radius: 56px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Webflow badge — top 12 / left 274, rotate 9.2deg */
+.dsn-hero__badge--webflow {
+  top: 16px;
+  left: 290px;
+  height: 32px;
+  padding: 6px 10px;
+  transform: rotate(9.2deg);
+}
+.dsn-hero__badge--webflow img {
+  height: 11px;
+  width: auto;
+  display: block;
+}
+
+/* Tilda badge — top 62 / left 241, rotate -0.62deg */
+.dsn-hero__badge--tilda {
+  top: 58px;
+  left: 256px;
+  height: 32px;
+  padding: 6px 10px 6px 8px;
+  gap: 4px;
+  transform: rotate(-0.62deg);
+  font-family: 'Onest', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.1px;
+  color: var(--color-dark);
+}
+.dsn-hero__badge--tilda img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   "ЧТО УМЕЕМ" / ANIMATE — Figma 20005168:191172
+   Три наклонённых карточки с ценами, под ними 2 CTA
+   ═══════════════════════════════════════════════════════════ */
+.dsn-animate {
+  padding: 100px 0 120px;
+  background-color: var(--color-neutral);
+}
+
+.dsn-animate__title {
+  margin: 0 0 40px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+/* Row with absolute-positioned tilted cards */
+.dsn-animate__cards {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Decorative stars */
+.dsn-animate__star {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+.dsn-animate__star--top    { left: 346px; top: -85px; }
+.dsn-animate__star--bottom {
+  left: calc(50% + 100px);
+  top: -20px;
+}
+
+.dsn-animate__actions { position: relative; }
+
+
+/* ── Card ─────────────────────────────────────────────── */
+.dsn-animate__card {
+  position: absolute;
+  width: 354.67px;
+  transition: transform 0.4s ease;
+}
+
+.dsn-animate__card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 31.25px 20px;
+  border-radius: 24px;
+  backdrop-filter: blur(2.9px);
+}
+
+.dsn-animate__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dsn-animate__card-title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.dsn-animate__card-desc {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.dsn-animate__card-price {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 21.25px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+/* Colors + initial rotation/position per card */
+.dsn-animate__card--orange {
+  left: 0;
+  top: 10px;
+  transform: rotate(-3.61deg);
+}
+.dsn-animate__card--orange .dsn-animate__card-inner { background-color: var(--color-orange); }
+
+.dsn-animate__card--violet {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.dsn-animate__card--violet .dsn-animate__card-inner { background-color: var(--color-violet); }
+
+.dsn-animate__card--pink {
+  right: 0;
+  top: 32px;
+  transform: rotate(2.47deg);
+}
+.dsn-animate__card--pink .dsn-animate__card-inner { background-color: var(--color-pink); }
+
+
+/* Hover — лёгкое движение + усиленный наклон */
+.dsn-animate__card--orange:hover {
+  transform: rotate(-5.5deg) translateY(-8px);
+}
+.dsn-animate__card--violet:hover {
+  transform: translateX(-50%) translateY(-8px) rotate(1.5deg);
+}
+.dsn-animate__card--pink:hover {
+  transform: rotate(4.5deg) translateY(-8px);
+}
+
+
+/* ── Actions (CTA buttons) ────────────────────────────── */
+.dsn-animate__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.dsn-animate__cta {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 56px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+.dsn-animate__cta:hover { opacity: 0.85; }
+
+.dsn-animate__cta--primary {
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+}
+.dsn-animate__cta--secondary {
+  background-color: var(--color-cocane);
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   REASONS — Figma 20005168:191224
+   Переиспользует .why__card* (main.css) c hover-reveal
+   ═══════════════════════════════════════════════════════════ */
+.dsn-reasons {
+  padding: 40px 0 120px;
+}
+
+.dsn-reasons__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.dsn-reasons__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+.dsn-reasons__title span { color: var(--color-grey); }
+
+.dsn-reasons__tagline {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-dark);
+  text-align: right;
+}
+
+.dsn-reasons .why__cards { margin-top: 0; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   STRATEGY — Figma 20005180:234627
+   Белая карточка с заголовком (инлайн-иконки) и композицией тегов
+   ═══════════════════════════════════════════════════════════ */
+.dsn-strategy {
+  padding: 100px 0 0;
+}
+
+.dsn-strategy__content {
+  position: relative;
+  background-color: var(--color-cocane);
+  border-radius: 32px;
+  padding: 60px 40px 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 680px;
+}
+
+/* Corner stars */
+.dsn-strategy__star {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+.dsn-strategy__star--tl { top: 20px;  left: 25px; }
+.dsn-strategy__star--tr { top: 20px;  right: 25px; }
+.dsn-strategy__star--bl { bottom: 20px; left: 25px; }
+.dsn-strategy__star--br { bottom: 20px; right: 25px; }
+
+/* Title */
+.dsn-strategy__title {
+  margin: 0;
+  max-width: 1000px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.dsn-strategy__title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.dsn-strategy__title-icon--violet { background-color: var(--color-violet); }
+.dsn-strategy__title-icon--lime   { background-color: var(--color-lime); }
+.dsn-strategy__title-icon--pink   { background-color: var(--color-pink); }
+
+.dsn-strategy__title-icon-img {
+  width: 22px;
+  height: 22px;
+}
+.dsn-strategy__title-icon-img--rotated { transform: rotate(90deg); }
+
+
+/* Tags composition area */
+.dsn-strategy__tags {
+  position: absolute;
+  bottom: 0;
+  width: 720px;
+  height: 260px;
+}
+
+/* Pill tags — wrapper + rotated inner */
+.dsn-strategy__tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dsn-strategy__tag span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15.1px 22.65px;
+  border: 1px solid var(--color-dark);
+  border-radius: 30.2px;
+  font-family: 'Onest', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: normal;
+  color: var(--color-dark);
+  white-space: nowrap;
+  background: transparent;
+}
+
+/* Продуктовый подход — white bg, rotate 20.33° */
+.dsn-strategy__tag--product {
+  left: 140px; top: -10px; width: 233px; height: 130px;
+  z-index: 3;
+}
+.dsn-strategy__tag--product span {
+  transform: rotate(20.33deg);
+  background-color: var(--color-cocane);
+  padding: 15.2px 22.8px;
+  border-radius: 30.4px;
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+}
+
+/* CMS-настройки — outline, rotate 0.8° */
+.dsn-strategy__tag--cms {
+  left: 355px; top: 0; width: 185px; height: 56px;
+  z-index: 4;
+}
+.dsn-strategy__tag--cms span { transform: rotate(0.8deg); }
+
+/* Сайты на Webflow — outline, rotate -24.29°, larger padding */
+.dsn-strategy__tag--webflow {
+  left: 320px; top: 75px; width: 225px; height: 147px;
+  z-index: 2;
+}
+.dsn-strategy__tag--webflow span {
+  transform: rotate(-24.29deg);
+  padding: 20px 30px;
+  border-radius: 40px;
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+}
+
+/* Продающие сайты на Тильде — outline, rotate 14.07° */
+.dsn-strategy__tag--tilda {
+  left: 0; top: 110px; width: 303px; height: 124px;
+  z-index: 1;
+}
+.dsn-strategy__tag--tilda span { transform: rotate(14.07deg); }
+
+/* UX-исследования — outline, rotate 10.09° */
+.dsn-strategy__tag--ux {
+  left: 500px; top: 155px; width: 207px; height: 87px;
+  z-index: 5;
+}
+.dsn-strategy__tag--ux span {
+  transform: rotate(10.09deg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Circle badges */
+.dsn-strategy__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dsn-strategy__badge span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: 'Onest', sans-serif;
+  font-size: 22px;
+  color: var(--color-dark);
+}
+.dsn-strategy__badge span img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* folder (orange) — 62.5 at (486, 88), rotate -16.98° */
+.dsn-strategy__badge--folder {
+  left: 595px; top: 100px; width: 62.5px; height: 62.5px;
+  z-index: 6;
+}
+.dsn-strategy__badge--folder span {
+  transform: rotate(-16.98deg);
+  background-color: var(--color-orange);
+}
+
+/* @ (dark) — 63.5 at (30, 160), rotate -17.48° */
+.dsn-strategy__badge--at {
+  left: 40px; top: 175px; width: 63.5px; height: 63.5px;
+  z-index: 6;
+}
+.dsn-strategy__badge--at span {
+  transform: rotate(-17.48deg);
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+}
+
+/* share (lime) — 60 at (171, 88), rotate -13.08° */
+.dsn-strategy__badge--share {
+  left: 205px; top: 100px; width: 60px; height: 60px;
+  z-index: 6;
+}
+.dsn-strategy__badge--share span {
+  transform: rotate(-13.08deg);
+  background-color: var(--color-lime);
+}
+
+/* # (pink) — 60 at (367, 162), rotate 11.68° */
+.dsn-strategy__badge--hash {
+  left: 448px; top: 180px; width: 60px; height: 60px;
+  z-index: 6;
+}
+.dsn-strategy__badge--hash span {
+  transform: rotate(11.68deg);
+  background-color: var(--color-pink);
+  font-family: 'Unbounded', sans-serif;
+}
+
+/* sort (violet, rotated 90°) — 59 at (225, -7), rotate 11.25° */
+.dsn-strategy__badge--sort {
+  left: 280px; top: -10px; width: 59px; height: 59px;
+  z-index: 6;
+}
+.dsn-strategy__badge--sort span {
+  transform: rotate(11.25deg);
+  background-color: var(--color-violet);
+}
+.dsn-strategy__badge--sort span img {
+  transform: rotate(90deg);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   STAGES — Figma 20005194:234776
+   Заголовок + 5 белых карточек с этапами
+   ═══════════════════════════════════════════════════════════ */
+.dsn-stages {
+  padding: 100px 0 0;
+}
+
+.dsn-stages__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dsn-stages__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.dsn-stages__star {
+  position: absolute;
+  left: 319px;
+  top: -30px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.dsn-stages__cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dsn-stages__card {
+  background-color: var(--color-cocane);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 200px;
+}
+
+.dsn-stages__card-head {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dsn-stages__card-num {
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-grey);
+}
+
+.dsn-stages__card-title {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.dsn-stages__card-desc {
+  margin: 0;
+  flex: 1;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CTA — Figma 20005168:191846
+   Lime баннер с заголовком, кнопкой и композицией тегов справа
+   ═══════════════════════════════════════════════════════════ */
+.dsn-cta {
+  padding: 100px 0;
+}
+
+.dsn-cta__card {
+  position: relative;
+  background-color: var(--color-lime);
+  border-radius: 32px;
+  padding: 50px;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.dsn-cta__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dsn-cta__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.dsn-cta__subtitle {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.34;
+  letter-spacing: 0.14px;
+  color: #151923;
+}
+
+.dsn-cta__btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 24px;
+  height: 50px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+  border-radius: 56px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dsn-cta__btn:hover { opacity: 0.9; }
+
+
+/* Tags composition 588×218, positioned inside lime card */
+.dsn-cta__tags {
+  position: absolute;
+  right: 0;
+  top: 91.86px;
+  width: 588px;
+  height: 218px;
+}
+
+/* Pills */
+.dsn-cta__tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dsn-cta__tag span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15.1px 22.65px;
+  border: 1px solid var(--color-dark);
+  border-radius: 30.2px;
+  background-color: var(--color-cocane);
+  font-family: 'Onest', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: normal;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+/* Продвижение — rotate -36.05° */
+.dsn-cta__tag--promo {
+  left: 315px; top: 72px; width: 184.087px; height: 157.919px;
+  z-index: 3;
+}
+.dsn-cta__tag--promo span {
+  transform: rotate(-36.05deg);
+  padding: 19.96px 29.94px;
+  border-radius: 39.93px;
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+}
+
+/* Реклама — rotate 9.43° */
+.dsn-cta__tag--ads {
+  left: 101.69px; top: 137.21px; width: 142.388px; height: 84.009px;
+  z-index: 2;
+}
+.dsn-cta__tag--ads span {
+  transform: rotate(9.43deg);
+  padding: 19.96px 29.94px;
+  border-radius: 39.93px;
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+}
+
+/* Конверсии — rotate 6.22° */
+.dsn-cta__tag--conv {
+  left: 300px; top: 27px; width: 145.509px; height: 68.29px;
+  z-index: 4;
+}
+.dsn-cta__tag--conv span {
+  transform: rotate(6.22deg);
+  padding: 15.184px 22.776px;
+  border-radius: 30.368px;
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+}
+
+/* Тильда — rotate -30.94° */
+.dsn-cta__tag--tilda {
+  left: 123px; top: 47.54px; width: 123.016px; height: 104.214px;
+  z-index: 3;
+}
+.dsn-cta__tag--tilda span {
+  transform: rotate(-30.94deg);
+  padding: 15.73px 23.59px;
+  border-radius: 31.45px;
+  font-size: 18.64px;
+  backdrop-filter: blur(9.83px);
+  -webkit-backdrop-filter: blur(9.83px);
+}
+
+/* Заявки — rotate 47.89° */
+.dsn-cta__tag--leads {
+  left: 483.86px; top: 58.28px; width: 110.746px; height: 114.529px;
+  z-index: 5;
+}
+.dsn-cta__tag--leads span {
+  transform: rotate(41.89deg);
+}
+
+/* Webflow — rotate 14.07° */
+.dsn-cta__tag--webflow {
+  left: 211px; top: 100.54px; width: 129.622px; height: 80.85px;
+  z-index: 3;
+}
+.dsn-cta__tag--webflow span {
+  transform: rotate(14.07deg);
+}
+
+/* Охваты — rotate 31.69° */
+.dsn-cta__tag--reach {
+  left: 461px; top: 124px; width: 120.948px; height: 102.684px;
+  z-index: 5;
+}
+.dsn-cta__tag--reach span {
+  transform: rotate(31.69deg);
+  backdrop-filter: blur(14.15px);
+  -webkit-backdrop-filter: blur(14.15px);
+}
+
+
+/* Circle badges */
+.dsn-cta__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dsn-cta__badge span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: 'Onest', sans-serif;
+  font-size: 22px;
+  color: var(--color-dark);
+}
+.dsn-cta__badge span img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: invert(1);
+}
+
+/* folder (dark) — rotate -16.98° */
+.dsn-cta__badge--folder {
+  left: 449px; top: 29px; width: 62.5px; height: 62.5px;
+  z-index: 6;
+}
+.dsn-cta__badge--folder span {
+  transform: rotate(-16.98deg);
+  width: 50.061px;
+  height: 50.061px;
+  background-color: var(--color-dark);
+}
+
+/* @ (dark) — rotate -17.48° */
+.dsn-cta__badge--at {
+  left: 236px; top: 160px; width: 63.5px; height: 63.5px;
+  z-index: 6;
+}
+.dsn-cta__badge--at span {
+  transform: rotate(-17.48deg);
+  width: 50.679px;
+  height: 50.679px;
+  background-color: var(--color-dark);
+  color: var(--color-cocane);
+}
+
+/* share (orange, with border) — rotate -13.08° */
+.dsn-cta__badge--share {
+  left: 330px; top: 87px; width: 60px; height: 60px;
+  z-index: 6;
+}
+.dsn-cta__badge--share span {
+  transform: rotate(-13.08deg);
+  width: 50.061px;
+  height: 50.061px;
+  background-color: var(--color-orange);
+  border: 1px solid var(--color-dark);
+}
+.dsn-cta__badge--share span img { filter: none; }
+
+/* # (pink, with border) — rotate 11.68° */
+.dsn-cta__badge--hash {
+  left: 425px; top: 162px; width: 60px; height: 60px;
+  z-index: 6;
+}
+.dsn-cta__badge--hash span {
+  transform: rotate(11.68deg);
+  width: 50.77px;
+  height: 50.77px;
+  background-color: var(--color-pink);
+  border: 1px solid var(--color-dark);
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+}
+
+/* Standalone arrow icon — violet circle */
+.dsn-cta__icon {
+  position: absolute;
+  left: 258px;
+  top: 63px;
+  width: 50.328px;
+  height: 50.328px;
+  background-color: var(--color-violet);
+  border: 1px solid var(--color-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.dsn-cta__icon img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ — Figma 20005168:191831
+   Accordion: only one item open at a time (JS в index).
+   ═══════════════════════════════════════════════════════════ */
+.faq {
+  padding-top: 100px;
+}
+
+.faq__row {
+  display: flex;
+  gap: 180px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.faq__heading {
+  position: relative;
+  width: 217px;
+  flex-shrink: 0;
+}
+
+.faq__title {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-dark);
+  text-transform: uppercase;
+}
+
+.faq__star {
+  position: absolute;
+  left: 240px;
+  top: 52.86px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.faq__list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq__item {
+  background-color: var(--color-cocane);
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+
+.faq__item[open] {
+  padding-bottom: 32px;
+}
+
+.faq__question {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  user-select: none;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question > span {
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  color: var(--color-dark);
+}
+
+.faq__chevron {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq__item[open] .faq__chevron {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  padding-top: 12px;
+}
+
+.faq__answer p {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   TELEGRAM CTA — Figma 20005168:204909 (только padding-top)
+   ═══════════════════════════════════════════════════════════ */
+.telegram-cta { padding-top: 100px; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ — мобильный
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+  .faq { padding-top: 60px; }
+
+  .faq__row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .faq__heading { width: 100%; }
+
+  .faq__title { font-size: 26px; line-height: 1.15; }
+
+  .faq__star {
+    left: auto;
+    right: 53px;
+    top: 14px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .faq__list { width: 100%; gap: 8px; }
+
+  .faq__item {
+    border-radius: 20px;
+    padding: 20px 16px;
+  }
+
+  .faq__item[open] { padding-bottom: 20px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE — 320 base (stretched up to 1199px)
+   Figma node 20005219:64509
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+  /* Container uses 16px side padding on mobile (design base 320) */
+  .container { padding: 0 16px; }
+
+  /* Header — 16 top padding per Figma mobile */
+  .header { padding-top: 16px; }
+
+  /* Hero section padding: 16 / 16 / 60 */
+  .dsn-hero {
+    padding: 16px 0 60px;
+  }
+
+  .dsn-hero__row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  /* Mockup comes first on mobile */
+  .dsn-hero__mockup {
+    order: -1;
+    width: 100%;
+    height: 240px;
+    border-radius: 24px;
+  }
+
+  .dsn-hero__mockup-img img {
+    object-position: center;
+  }
+
+  /* Badges — scaled for 288px card width */
+  .dsn-hero__badge--webflow {
+    top: 8px;
+    left: auto;
+    right: 12px;
+    height: 28.8px;
+    padding: 5.76px 8.64px;
+    transform: rotate(9.2deg);
+  }
+  .dsn-hero__badge--webflow img {
+    width: 58px;
+    height: 10px;
+  }
+
+  .dsn-hero__badge--tilda {
+    top: 44px;
+    left: auto;
+    right: 20px;
+    height: 28.8px;
+    padding: 5.76px 8.64px 5.76px 7.2px;
+    gap: 2.88px;
+    font-size: 8.64px;
+    letter-spacing: 0.0864px;
+  }
+  .dsn-hero__badge--tilda img {
+    width: 17.28px;
+    height: 17.28px;
+  }
+
+  /* Lime card */
+  .dsn-hero__content {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 40px;
+    justify-content: flex-start;
+    border-radius: 24px;
+  }
+
+  .dsn-hero__text {
+    gap: 16px;
+  }
+
+  .dsn-hero__title {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .dsn-hero__subtitle {
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.26px;
+  }
+
+  /* Actions: column, full width */
+  .dsn-hero__actions {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .dsn-hero__cta {
+    width: 100%;
+    height: 48px;
+    padding: 16px 24px;
+    justify-content: center;
+  }
+  .dsn-hero__cta-full { display: none; }
+  .dsn-hero__cta-short { display: inline; }
+
+  /* Social buttons — full labeled, row of 2 equal */
+  .dsn-hero__social {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .dsn-hero__social-btn {
+    flex: 1 1 0;
+    width: auto;
+    height: 48px;
+    padding: 8px 10px 8px 7px;
+    gap: 3px;
+    justify-content: flex-start;
+    border-width: 0.887px;
+    border-radius: 49.67px;
+  }
+  .dsn-hero__social-btn img {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .dsn-hero__social-btn:hover {
+    background-color: transparent;
+  }
+  .dsn-hero__social-btn:hover img {
+    filter: none;
+  }
+
+  .dsn-hero__social-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    color: var(--color-dark);
+    white-space: nowrap;
+  }
+  .dsn-hero__social-sub {
+    font-family: 'Onest', sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.3;
+  }
+  .dsn-hero__social-name {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+  }
+
+
+  /* ── ANIMATE / "что умеем" — Figma 20005219:71516 ────── */
+  .dsn-animate {
+    padding: 60px 0;
+  }
+
+  .dsn-animate__title {
+    margin: 0 0 40px;
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  /* Cards: stack vertically */
+  .dsn-animate__cards {
+    position: static;
+    height: auto;
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dsn-animate__card {
+    position: static;
+    width: 100%;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .dsn-animate__card--orange { transform: rotate(-3.61deg); }
+  .dsn-animate__card--violet { transform: none; }
+  .dsn-animate__card--pink   { transform: rotate(2.47deg); }
+
+  .dsn-animate__card--orange:hover { transform: rotate(-3.61deg); }
+  .dsn-animate__card--violet:hover { transform: none; }
+  .dsn-animate__card--pink:hover   { transform: rotate(2.47deg); }
+
+  .dsn-animate__card-inner {
+    gap: 32px;
+    padding: 20px 16px;
+    border-radius: 24px;
+  }
+
+  .dsn-animate__card-body {
+    gap: 15px;
+  }
+
+  .dsn-animate__card-title { font-size: 20px; line-height: 1.2; }
+  .dsn-animate__card-desc  { font-size: 12px; line-height: 1.2; }
+  .dsn-animate__card-price { font-size: 21.25px; line-height: 1.2; }
+
+  /* Decorative stars — top near title, bottom hidden */
+  .dsn-animate__star { width: 20px; height: 20px; }
+  .dsn-animate__star--top {
+    left: auto;
+    right: 32px;
+    top: -52px;
+  }
+  .dsn-animate__star--bottom { display: none; }
+
+  /* Actions — full-width stacked buttons */
+  .dsn-animate__actions {
+    flex-direction: column;
+    gap: 4px;
+    align-items: stretch;
+  }
+
+  .dsn-animate__cta {
+    width: 100%;
+    height: 48px;
+    padding: 16px 24px;
+    justify-content: center;
+  }
+
+
+  /* ── REASONS — Figma 20005219:64580 ────────────────────── */
+  .dsn-reasons {
+    padding: 60px 0 0;
+  }
+
+  .dsn-reasons__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .dsn-reasons__title {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .dsn-reasons__tagline {
+    font-family: 'Onest', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+
+  /* ── STRATEGY — Figma 20005219:65069 ───────────────────── */
+  .dsn-strategy {
+    padding: 60px 0 0;
+  }
+
+  .dsn-strategy__content {
+    height: 570px;
+    padding: 40px 20px 0;
+    border-radius: 24px;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  /* Corner stars: only 3 (no BR); size 20px */
+  .dsn-strategy__star { width: 20px; height: 20px; }
+  .dsn-strategy__star--tl { top: 12px; left: 12px; }
+  .dsn-strategy__star--tr { top: 12px; right: 12px; }
+  .dsn-strategy__star--bl { bottom: 12px; left: 12px; top: auto; }
+  .dsn-strategy__star--br { display: none; }
+
+  /* Title — Unbounded Regular 22, left align */
+  .dsn-strategy__title {
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  /* Inline icons — 32px circles with 14px icon */
+  .dsn-strategy__title-icon {
+    width: 32px;
+    height: 32px;
+    top: -2px;
+  }
+  .dsn-strategy__title-icon-img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Tags composition area: full content width × 186px, pinned bottom */
+  .dsn-strategy__tags {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 186px;
+  }
+
+  /* Pill tags — mobile padding + font */
+  .dsn-strategy__tag span {
+    padding: 8.782px 13.173px;
+    border-width: 0.582px;
+    border-radius: 17.564px;
+    font-size: 10px;
+  }
+
+  .dsn-strategy__tag--product {
+    left: 176.89px; top: 36.93px;
+    width: 113.013px; height: 118.948px;
+  }
+  .dsn-strategy__tag--product span {
+    transform: rotate(47.34deg);
+    padding: 8.831px 13.247px;
+    border-radius: 17.663px;
+    backdrop-filter: blur(5.52px);
+    -webkit-backdrop-filter: blur(5.52px);
+  }
+
+  .dsn-strategy__tag--cms {
+    left: 177.89px; top: 2.08px;
+    width: 111.36px; height: 65.039px;
+  }
+  .dsn-strategy__tag--cms span { transform: rotate(19.75deg); }
+
+  .dsn-strategy__tag--webflow {
+    left: 78.69px; top: 89.13px;
+    width: 131.416px; height: 85.607px;
+  }
+  .dsn-strategy__tag--webflow span {
+    transform: rotate(-24.29deg);
+    padding: 11.611px 17.417px;
+    border-radius: 23.222px;
+    background: transparent;
+    backdrop-filter: blur(7.257px);
+    -webkit-backdrop-filter: blur(7.257px);
+  }
+
+  .dsn-strategy__tag--tilda {
+    left: 28px; top: 23px;
+    width: 119.599px; height: 162.264px;
+  }
+  .dsn-strategy__tag--tilda span { transform: rotate(-57.2deg); }
+
+  .dsn-strategy__tag--ux {
+    left: 162.36px; top: 137.34px;
+    width: 119.902px; height: 50.482px;
+  }
+  .dsn-strategy__tag--ux span {
+    transform: rotate(8.09deg);
+    backdrop-filter: blur(8.233px);
+    -webkit-backdrop-filter: blur(8.233px);
+  }
+
+  /* Badges: inner ~29px, smaller icons */
+  .dsn-strategy__badge span {
+    width: 29.117px;
+    height: 29.117px;
+    font-size: 13px;
+  }
+  .dsn-strategy__badge span img {
+    width: 12.783px;
+    height: 12.783px;
+  }
+
+  .dsn-strategy__badge--folder {
+    left: 206.67px; top: 114.59px;
+    width: 36.35px; height: 36.35px;
+  }
+  .dsn-strategy__badge--folder span { transform: rotate(-16.98deg); }
+
+  .dsn-strategy__badge--at {
+    left: -65.81px; top: 149.36px;
+    width: 36.971px; height: 36.971px;
+  }
+  .dsn-strategy__badge--at span {
+    transform: rotate(-17.48deg);
+    font-size: 12.764px;
+  }
+
+  .dsn-strategy__badge--share {
+    left: 255px; top: 76px;
+    width: 34.953px; height: 34.953px;
+  }
+  .dsn-strategy__badge--share span { transform: rotate(-13.08deg); }
+  .dsn-strategy__badge--share span img {
+    width: 14.914px;
+    height: 14.914px;
+  }
+
+  .dsn-strategy__badge--hash {
+    left: 120px; top: 154px;
+    width: 34.895px; height: 34.895px;
+  }
+  .dsn-strategy__badge--hash span {
+    transform: rotate(11.68deg);
+    font-size: 13.302px;
+  }
+
+  .dsn-strategy__badge--sort {
+    left: 106px; top: 88px;
+    width: 34.24px; height: 34.24px;
+  }
+  .dsn-strategy__badge--sort span { transform: rotate(11.25deg); }
+
+
+  /* ── STAGES — Figma 20005219:65033 ─────────────────────── */
+  .dsn-stages {
+    padding: 60px 0 0;
+  }
+
+  .dsn-stages__title {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .dsn-stages__star {
+    left: auto;
+    right: 36px;
+    top: -30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .dsn-stages__cards {
+    margin-top: 30px;
+    gap: 8px;
+  }
+
+  .dsn-stages__card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .dsn-stages__card-head {
+    flex: 0 0 auto;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dsn-stages__card-num { font-size: 14px; }
+  .dsn-stages__card-title { font-size: 16px; }
+
+  .dsn-stages__card-desc {
+    font-size: 12px;
+    line-height: 1.3;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+
+  /* ── CTA — Figma 20005219:64851 ─────────────────────────── */
+  .dsn-cta {
+    padding: 60px 0;
+  }
+
+  .dsn-cta__card {
+    height: 420px;
+    padding: 20px 16px 0;
+    border-radius: 20px;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+
+  .dsn-cta__text { gap: 12px; }
+
+  .dsn-cta__title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .dsn-cta__subtitle {
+    font-size: 14px;
+    line-height: 1.34;
+    letter-spacing: 0.14px;
+  }
+
+  .dsn-cta__btn {
+    height: 50px;
+    padding: 16px 24px;
+  }
+
+  /* Tags composition — 358.734 × 133, bottom-right */
+  .dsn-cta__tags {
+    left: auto;
+    top: auto;
+    right: -7.22px;
+    bottom: 2.39px;
+    width: 358.734px;
+    height: 133px;
+  }
+
+  /* Pill base — mobile */
+  .dsn-cta__tag span {
+    padding: 9.212px 13.818px;
+    border-width: 0.61px;
+    border-radius: 18.424px;
+    font-size: 10.982px;
+  }
+
+  .dsn-cta__tag--promo {
+    left: 190.23px; top: 43.93px;
+    width: 111.942px; height: 96.066px;
+  }
+  .dsn-cta__tag--promo span {
+    transform: rotate(-36.05deg);
+    padding: 12.179px 18.269px;
+    border-radius: 24.358px;
+    backdrop-filter: blur(7.612px);
+    -webkit-backdrop-filter: blur(7.612px);
+  }
+
+  .dsn-cta__tag--ads {
+    left: 63.87px; top: 85.71px;
+    width: 86.72px; height: 51.198px;
+  }
+  .dsn-cta__tag--ads span {
+    transform: rotate(9.43deg);
+    padding: 12.179px 18.269px;
+    border-radius: 24.358px;
+    backdrop-filter: blur(7.612px);
+    -webkit-backdrop-filter: blur(7.612px);
+  }
+
+  .dsn-cta__tag--conv {
+    left: 176.08px; top: 19.52px;
+    width: 88.811px; height: 41.635px;
+  }
+  .dsn-cta__tag--conv span {
+    transform: rotate(6.22deg);
+    padding: 9.264px 13.895px;
+    border-radius: 18.527px;
+    backdrop-filter: blur(5.79px);
+    -webkit-backdrop-filter: blur(5.79px);
+  }
+
+  .dsn-cta__tag--tilda {
+    left: 67.53px; top: 28.83px;
+    width: 75.719px; height: 64.177px;
+  }
+  .dsn-cta__tag--tilda span {
+    transform: rotate(-30.94deg);
+    padding: 9.595px 14.393px;
+    border-radius: 19.19px;
+    font-size: 11.375px;
+    backdrop-filter: blur(5.997px);
+    -webkit-backdrop-filter: blur(5.997px);
+  }
+
+  .dsn-cta__tag--leads {
+    left: 289.71px; top: 30.28px;
+    width: 67.397px; height: 69.692px;
+  }
+  .dsn-cta__tag--leads span { transform: rotate(47.89deg); }
+
+  .dsn-cta__tag--webflow {
+    left: 124.61px; top: 60.34px;
+    width: 79.309px; height: 49.354px;
+  }
+  .dsn-cta__tag--webflow span { transform: rotate(14.07deg); }
+
+  .dsn-cta__tag--reach {
+    left: 281.25px; top: 75.65px;
+    width: 73.733px; height: 62.595px;
+  }
+  .dsn-cta__tag--reach span {
+    transform: rotate(31.69deg);
+    backdrop-filter: blur(8.636px);
+    -webkit-backdrop-filter: blur(8.636px);
+  }
+
+  /* Badges — mobile circles ~30px */
+  .dsn-cta__badge span {
+    width: 30.542px;
+    height: 30.542px;
+    font-size: 13.388px;
+  }
+  .dsn-cta__badge span img {
+    width: 13.409px;
+    height: 13.409px;
+  }
+
+  .dsn-cta__badge--folder {
+    left: 263.44px; top: 15.25px;
+    width: 38.129px; height: 38.129px;
+  }
+  .dsn-cta__badge--folder span { transform: rotate(-16.98deg); }
+
+  .dsn-cta__badge--at {
+    left: 146.98px; top: 99.61px;
+    width: 38.78px; height: 38.78px;
+  }
+  .dsn-cta__badge--at span { transform: rotate(-17.48deg); }
+
+  .dsn-cta__badge--share {
+    left: 194.33px; top: 53.08px;
+    width: 36.663px; height: 36.663px;
+  }
+  .dsn-cta__badge--share span {
+    transform: rotate(-13.08deg);
+    border-width: 0.61px;
+  }
+  .dsn-cta__badge--share span img {
+    width: 15.643px;
+    height: 15.643px;
+  }
+
+  .dsn-cta__badge--hash {
+    left: 260.29px; top: 101.87px;
+    width: 36.603px; height: 36.603px;
+  }
+  .dsn-cta__badge--hash span {
+    transform: rotate(11.68deg);
+    border-width: 0.61px;
+    font-size: 13.953px;
+  }
+
+  /* Arrow icon — violet circle */
+  .dsn-cta__icon {
+    left: 145.23px;
+    top: 35.83px;
+    width: 30.705px;
+    height: 30.705px;
+    border-width: 0.61px;
+  }
+  .dsn-cta__icon img {
+    width: 15.87px;
+    height: 15.87px;
+  }
+}

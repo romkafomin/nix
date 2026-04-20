@@ -1,0 +1,590 @@
+/* ═══════════════════════════════════════════════════════════
+   CASES HERO — Figma node 20005103:19880
+   ═══════════════════════════════════════════════════════════ */
+
+.cases-hero {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+
+.cases-hero__row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 102px;
+}
+
+.cases-hero__title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #121313;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cases-hero__star {
+  width: 27px;
+  height: 35px;
+  margin-top: -8px;
+  flex-shrink: 0;
+}
+
+.cases-hero__badge {
+  width: 102px;
+  height: 102px;
+  flex-shrink: 0;
+}
+
+.cases-hero__badge img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CASES TABS — Figma node 20005137:104324
+   ═══════════════════════════════════════════════════════════ */
+
+.cases-tabs {
+  padding-bottom: 30px;
+}
+
+.cases-tabs + .cases {
+  padding-top: 0;
+}
+
+.cases-tabs .container {
+  padding: 0 60px;
+}
+
+.cases-tabs__list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.cases-tabs__btn {
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.12px;
+  color: #121313;
+  background: transparent;
+  border: 1px solid #121313;
+  border-radius: 56px;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.cases-tabs__btn:hover {
+  background: #121313;
+  color: #fff;
+}
+
+.cases-tabs__btn.is-active {
+  background: #121313;
+  color: #fff;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CASES ROW — 3 карточки в ряд, Figma 20005106:24381
+   ═══════════════════════════════════════════════════════════ */
+
+.cases-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 60px;
+}
+
+.cases__list--after-row {
+  margin-top: 100px;
+}
+
+.cases-row__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cases-row > .cases-row__card:first-child {
+  flex: 0 0 420px;
+  width: 420px;
+}
+
+.cases-row--line-02 {
+  margin-top: 100px;
+}
+
+.cases-row--line-02 > .cases-row__card:first-child {
+  flex: 1 1 0;
+  width: auto;
+}
+
+.cases-row--line-02 > .cases-row__card:last-child {
+  flex: 0 0 420px;
+  width: 420px;
+}
+
+.cases-row--line-03 {
+  margin-top: 60px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CASES TELEGRAM CTA — Figma 20005103:20348
+   ═══════════════════════════════════════════════════════════ */
+
+.cases-tg {
+  padding: 100px 0;
+}
+
+.cases-tg__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  text-decoration: none;
+}
+
+.cases-tg__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 100px;
+  transition: transform 0.2s ease;
+}
+
+.cases-tg__inner:hover .cases-tg__icon {
+  transform: scale(1.05);
+}
+
+.cases-tg__icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.cases-tg__text {
+  margin: 0;
+  width: 278px;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #121313;
+  text-align: center;
+}
+
+.cases-row__preview {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cases-row__preview--pink   { background-color: #febee7; }
+.cases-row__preview--dark   { background-color: #121313; }
+.cases-row__preview--orange { background-color: #f9cd67; }
+.cases-row__preview--violet { background-color: #d7d6ff; }
+.cases-row__preview--plain  { background-color: transparent; }
+
+.cases-row__preview--plain .cases-row__mockup {
+  object-fit: cover;
+  object-position: center;
+}
+
+.cases-row__logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 40px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 56px;
+  z-index: 2;
+}
+
+.cases-row__logo img {
+  display: block;
+  height: 14px;
+  width: auto;
+}
+
+.cases-row__logo--tilda {
+  padding: 8px 12px 8px 10px;
+  font-family: 'Onest', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12px;
+  color: #121313;
+}
+
+.cases-row__logo--tilda svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.cases-row__mockup {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 1;
+}
+
+.cases-row__preview--orange .cases-row__mockup {
+  width: auto;
+  left: auto;
+  right: 0;
+  top: 38px;
+  bottom: 0;
+  height: calc(100% - 38px);
+  object-fit: contain;
+  object-position: right top;
+}
+
+@media (max-width: 1199px) {
+  .cases-row__preview--orange .cases-row__mockup {
+    width: auto;
+    left: auto;
+    right: 0;
+    top: 38px;
+    bottom: 0;
+    height: auto;
+    object-fit: cover;
+    object-position: right top;
+  }
+}
+
+.cases-row__preview--dark .cases-row__mockup {
+  width: auto;
+  height: 100%;
+  left: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.cases-row__gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cases-row__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cases-row__info .cases-row__btn {
+  margin-top: auto;
+}
+
+.cases-row__info-top {
+  display: contents;
+}
+
+.cases-row__url {
+  display: none;
+}
+
+.cases-row__title {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #121313;
+}
+
+.cases-row__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px 0 24px;
+  border: 1px solid #121313;
+  border-radius: 56px;
+  background: none;
+  color: #121313;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.cases-row__btn:hover {
+  opacity: 0.6;
+}
+
+.cases-row__btn svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.cases-row__btn--pending {
+  border-style: dashed;
+  border-color: #8f8f9c;
+  color: #8f8f9c;
+  cursor: default;
+}
+
+.cases-row__btn--pending:hover {
+  opacity: 1;
+}
+
+
+/* ── Mobile (≤1199px) ──────────────────────────────────────── */
+@media (max-width: 1199px) {
+  .cases-hero {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .cases-hero__row {
+    min-height: 0;
+    align-items: flex-start;
+  }
+
+  .cases-hero__title {
+    display: block;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .cases-hero__star {
+    display: inline-block;
+    width: 13px;
+    height: 17px;
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+  }
+
+  .cases-hero__badge {
+    width: 74px;
+    height: 74px;
+    margin-top: -7px;
+  }
+
+  .cases-tabs {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .cases-tabs + .cases {
+    padding-top: 0;
+  }
+
+  .cases-tabs .container {
+    padding: 0 16px;
+  }
+
+  .cases-tabs__list {
+    gap: 8px;
+  }
+
+  .cases-tabs__btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .cases-tabs__btn:nth-child(n+3) {
+    display: none;
+  }
+
+  .cases-row {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 32px;
+  }
+
+  .cases-row > .cases-row__card:first-child,
+  .cases-row > .cases-row__card:last-child {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  /* Reorder on mobile: Кампус goes above «Лендинг для строительной компании» */
+  .cases .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .cases .container > .cases__list,
+  .cases .container > .cases-row,
+  .cases .container > .cases__list--after-row {
+    margin-top: 0;
+  }
+
+  .cases .container > .cases-row:not(.cases-row--line-02):not(.cases-row--line-03) {
+    display: contents;
+  }
+
+  .cases .container > .cases-row:not(.cases-row--line-02):not(.cases-row--line-03) > .cases-row__card:nth-child(1) { order: 2; }
+  .cases .container > .cases-row:not(.cases-row--line-02):not(.cases-row--line-03) > .cases-row__card:nth-child(2) { order: 3; }
+  .cases .container > .cases-row:not(.cases-row--line-02):not(.cases-row--line-03) > .cases-row__card:nth-child(3) { order: 5; }
+  .cases .container > .cases__list                      { order: 1; }
+  .cases .container > .cases__list--after-row           { order: 4; }
+  .cases .container > .cases-row--line-02               { order: 6; }
+  .cases .container > .cases-row--line-03               { order: 7; }
+
+  .cases-row--line-02 {
+    margin-top: 60px;
+  }
+
+  .cases-row--line-02 > .cases-row__card:last-child {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .cases-tg {
+    padding: 60px 0;
+  }
+
+  .cases-tg__inner {
+    gap: 20px;
+  }
+
+  .cases-tg__icon {
+    padding: 24px;
+  }
+
+  .cases-tg__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cases-tg__text {
+    width: 220px;
+    font-size: 14px;
+  }
+
+  .cases-row__card {
+    gap: 20px;
+  }
+
+  .cases-row__preview {
+    height: 280px;
+    border-radius: 16px;
+  }
+
+  .cases-row__mockup {
+    object-fit: unset;
+  }
+
+  .cases-row__preview--pink {
+    height: 320px;
+  }
+
+  .cases-row__preview--pink .cases-row__mockup {
+    width: calc(100% + 14px);
+    left: 0;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .cases-row__logo {
+    top: 12px;
+    left: 12px;
+    height: 32px;
+    padding: 6px 10px;
+  }
+
+  .cases-row__logo img { height: 12px; }
+  .cases-row__logo--tilda svg { width: 18px; height: 18px; }
+  .cases-row__logo--tilda { font-size: 11px; }
+
+  .cases-row__title {
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  .cases-row__info--with-url {
+    gap: 12px;
+  }
+
+  .cases-row__info--with-url .cases-row__info-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cases-row__info--with-url .cases-row__btn {
+    margin-top: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #121313;
+    flex-shrink: 0;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .cases-row__info--with-url .cases-row__btn-text {
+    display: none;
+  }
+
+  .cases-row__info--with-url .cases-row__btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cases-row__info--with-url .cases-row__url {
+    display: block;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #8f8f9c;
+    white-space: nowrap;
+  }
+}

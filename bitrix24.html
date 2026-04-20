@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Внедрение Битрикс24 — NIX Agency настраивает CRM под ваш бизнес." />
+
+  <title>Битрикс24 — NIX Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500&family=Unbounded:wght@200;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/bitrix24.css" />
+</head>
+<body>
+
+<div class="page" id="scale-wrapper">
+
+  <!-- ═══ HEADER (reused from index) ═══ -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="header__logo">
+        <img src="assets/logo.svg" alt="NIX Agency" />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#services">Услуги</a></li>
+          <li><a href="/cases">Кейсы</a></li>
+          <li><a href="/blog">Блог</a></li>
+          <li><a href="/contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacts" class="header__cta">
+        связаться
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <path d="M7.5 18.5L18.5 7.5M18.5 7.5H10.5M18.5 7.5V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <button class="header__burger" type="button" aria-label="Меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21M3 6H21M3 18H21" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ═══ SERVICE HERO — Figma 20005156:175127 ═══ -->
+  <section class="svc-hero" id="hero">
+    <div class="container">
+      <div class="svc-hero__row">
+
+        <!-- Violet content card -->
+        <div class="svc-hero__content">
+          <div class="svc-hero__text">
+            <h1 class="svc-hero__title">Настраиваем Битрикс24<br />под ваш бизнес</h1>
+            <p class="svc-hero__subtitle">
+              Внедряем CRM, изучаем и оптимизируем бизнес-процессы,<br />
+              обучаем сотрудников
+            </p>
+          </div>
+
+          <div class="svc-hero__actions">
+            <a href="#contacts" class="svc-hero__cta">
+              <span class="svc-hero__cta-full">Оставить заявку на внедрение</span>
+              <span class="svc-hero__cta-short">Оставить заявку</span>
+            </a>
+
+            <div class="svc-hero__social">
+              <a href="#" class="svc-hero__social-btn" aria-label="WhatsApp">
+                <img src="assets/icons/whatsapp.svg" alt="" />
+                <span class="svc-hero__social-info">
+                  <span class="svc-hero__social-sub">Написать в</span>
+                  <span class="svc-hero__social-name">whatsapp</span>
+                </span>
+              </a>
+              <a href="https://t.me/" class="svc-hero__social-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <img src="assets/icons/telegram.svg" alt="" />
+                <span class="svc-hero__social-info">
+                  <span class="svc-hero__social-sub">Написать в</span>
+                  <span class="svc-hero__social-name">Telegram</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dark mockup card -->
+        <div class="svc-hero__mockup">
+          <picture>
+            <source media="(max-width: 1199px)" srcset="assets/bitrix24-hero-mobile.png" />
+            <img src="assets/bitrix24-hero.webp" alt="Битрикс24 на макбуке" />
+          </picture>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ MARQUEE LINE — Figma 20005156:152998 ═══ -->
+  <section class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+      <div class="marquee__content" aria-hidden="true">
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+        <span class="marquee__text">DIGITAL AGENCY</span>
+        <img class="marquee__icon" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PROBLEMS — Figma 20005156:153006 ═══ -->
+  <section class="problems" id="problems">
+    <div class="container">
+
+      <h2 class="problems__title">
+        <span>Какие проблемы</span><br />
+        <span class="problems__title-muted">решает Битрикс24</span>
+      </h2>
+
+      <div class="problems__star">
+        <img src="assets/icons/star-why.svg" alt="" />
+      </div>
+
+      <div class="problems__grid">
+
+        <!-- Row 1 -->
+        <div class="problems__row">
+          <article class="problems__card">
+            <div class="problems__icon problems__icon--violet">
+              <img src="assets/icons/sort-card.svg" alt="" class="problems__icon-img problems__icon-img--rotated" />
+            </div>
+            <div class="problems__body">
+              <span class="problems__num">01</span>
+              <h3 class="problems__card-title">Заявки теряются</h3>
+              <div class="problems__reveal">
+                <div class="problems__reveal-inner">
+                  <hr class="problems__divider" />
+                  <p class="problems__desc">Клиенты звонят, пишут в мессенджеры и соцсети, но менеджеры забывают их фиксировать</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="problems__card">
+            <div class="problems__icon problems__icon--pink">
+              <img src="assets/icons/flame.svg" alt="" class="problems__icon-img" />
+            </div>
+            <div class="problems__body">
+              <span class="problems__num">02</span>
+              <h3 class="problems__card-title">Нет прозрачности в продажах</h3>
+              <div class="problems__reveal">
+                <div class="problems__reveal-inner">
+                  <hr class="problems__divider" />
+                  <p class="problems__desc">Сложно понять, сколько сделок в работе и на каком этапе они находятся</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="problems__card">
+            <div class="problems__icon problems__icon--orange">
+              <img src="assets/icons/share.svg" alt="" class="problems__icon-img" />
+            </div>
+            <div class="problems__body">
+              <span class="problems__num">03</span>
+              <h3 class="problems__card-title">Ручная работа отнимает время</h3>
+              <div class="problems__reveal">
+                <div class="problems__reveal-inner">
+                  <hr class="problems__divider" />
+                  <p class="problems__desc">Постановка задач, напоминания и согласования занимают слишком много ресурсов</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="problems__row">
+          <article class="problems__card">
+            <div class="problems__icon problems__icon--pink">
+              <img src="assets/icons/flame.svg" alt="" class="problems__icon-img" />
+            </div>
+            <div class="problems__body">
+              <span class="problems__num">04</span>
+              <h3 class="problems__card-title">Плохая коммуникация</h3>
+              <div class="problems__reveal">
+                <div class="problems__reveal-inner">
+                  <hr class="problems__divider" />
+                  <p class="problems__desc">Информация теряется в чатах, задачи остаются без ответа, дедлайны срываются</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="problems__card">
+            <div class="problems__icon problems__icon--orange">
+              <img src="assets/icons/share.svg" alt="" class="problems__icon-img" />
+            </div>
+            <div class="problems__body">
+              <span class="problems__num">05</span>
+              <h3 class="problems__card-title">Нет понимания эффективности</h3>
+              <div class="problems__reveal">
+                <div class="problems__reveal-inner">
+                  <hr class="problems__divider" />
+                  <p class="problems__desc">Руководители не видят, какие каналы приводят клиентов и как работают сотрудники</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CTA tile -->
+          <a href="#contacts" class="problems__card problems__card--cta">
+            <div class="problems__cta-icon">
+              <img src="assets/icons/arrow-up-right.svg" alt="" />
+            </div>
+            <span class="problems__cta-text">Узнать, как это исправить</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ BENEFITS — Figma 20005156:153072 ═══ -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+
+      <h2 class="benefits__title">
+        <span>Почему вам нужна<br />CRM и </span><span class="benefits__title-muted">что вы получите?</span>
+      </h2>
+
+      <div class="benefits__star">
+        <img src="assets/icons/star-why.svg" alt="" />
+      </div>
+
+      <div class="benefits__grid">
+
+        <div class="benefits__row">
+          <article class="benefits__card">
+            <div class="benefits__head">
+              <div class="benefits__num">1</div>
+              <h3 class="benefits__card-title">Управление продажами</h3>
+            </div>
+            <hr class="benefits__divider" />
+            <ul class="benefits__list">
+              <li>Воронки с этапами сделок и автоматическими напоминаниями</li>
+              <li>История взаимодействий с клиентами в одном месте</li>
+            </ul>
+          </article>
+
+          <article class="benefits__card">
+            <div class="benefits__head">
+              <div class="benefits__num">2</div>
+              <h3 class="benefits__card-title">Автоматизация процессов</h3>
+            </div>
+            <hr class="benefits__divider" />
+            <ul class="benefits__list">
+              <li>Постановка задач, напоминания</li>
+              <li>Роботы и триггеры, которые исключают рутину</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="benefits__row">
+          <article class="benefits__card">
+            <div class="benefits__head">
+              <div class="benefits__num">3</div>
+              <h3 class="benefits__card-title">Интеграция всех каналов</h3>
+            </div>
+            <hr class="benefits__divider" />
+            <ul class="benefits__list">
+              <li>Телефония, почта, мессенджеры, соцсети</li>
+              <li>Складской учёт</li>
+            </ul>
+          </article>
+
+          <article class="benefits__card">
+            <div class="benefits__head">
+              <div class="benefits__num">4</div>
+              <h3 class="benefits__card-title">Сквозная аналитика</h3>
+            </div>
+            <hr class="benefits__divider" />
+            <ul class="benefits__list">
+              <li>Контроль за расходами на рекламу, анализ каналов продаж</li>
+              <li>Отчёты по эффективности сотрудников</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="benefits__row">
+          <article class="benefits__card">
+            <div class="benefits__head">
+              <div class="benefits__num">5</div>
+              <h3 class="benefits__card-title">Командная работа</h3>
+            </div>
+            <hr class="benefits__divider" />
+            <ul class="benefits__list">
+              <li>Удобное управление задачами</li>
+              <li>Диаграммы Ганта, Канбан и централизованное хранение данных</li>
+            </ul>
+          </article>
+
+          <article class="benefits__card benefits__card--dark">
+            <p class="benefits__quote">
+              Мы адаптируем <span class="benefits__quote-accent">Битрикс24</span> под ваши задачи, чтобы система помогала вам в работе, а не усложняла её
+            </p>
+            <img class="benefits__quote-star" src="assets/icons/marquee-star.svg" alt="" />
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PROCESS — Figma 20005156:153144 ═══ -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="process__layout">
+
+        <div class="process__title-wrap">
+          <h2 class="process__title">Как мы<br />работаем</h2>
+          <div class="process__star">
+            <img src="assets/icons/star-why.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="process__right">
+          <div class="process__cards">
+
+            <article class="process__card">
+              <div class="process__num">1</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Изучение бизнеса</h3>
+                <hr class="process__divider" />
+                <p class="process__desc">Проводим интервью с ключевыми членами команды, анализируем текущие процессы</p>
+              </div>
+            </article>
+
+            <article class="process__card">
+              <div class="process__num">2</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Проектирование системы</h3>
+                <hr class="process__divider" />
+                <ul class="process__list">
+                  <li>Разрабатываем схемы бизнес-процессов, адаптируем их под этапы сделок</li>
+                  <li>Прописываем список полей, автоматизированных уведомлений, задач и роботов</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process__card">
+              <div class="process__num">3</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Настройка и интеграции</h3>
+                <hr class="process__divider" />
+                <p class="process__desc">Настраиваем CRM под ваш бизнес, подключаем почту, телефонию, мессенджеры и другие сервисы</p>
+              </div>
+            </article>
+
+            <article class="process__card">
+              <div class="process__num">4</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Тестирование</h3>
+                <hr class="process__divider" />
+                <p class="process__desc">Проверяем работоспособность системы, исправляем возможные ошибки</p>
+              </div>
+            </article>
+
+            <article class="process__card">
+              <div class="process__num">5</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Обучение команды</h3>
+                <hr class="process__divider" />
+                <p class="process__desc">Проводим групповое обучение, чтобы сотрудники эффективно использовали CRM</p>
+              </div>
+            </article>
+
+            <article class="process__card">
+              <div class="process__num">6</div>
+              <div class="process__body">
+                <h3 class="process__card-title">Поддержка</h3>
+                <hr class="process__divider" />
+                <p class="process__desc">Предоставляем бесплатную техническую поддержку в течение 30 дней после завершения внедрения</p>
+              </div>
+            </article>
+
+          </div>
+
+          <a href="#contacts" class="process__cta">
+            <span class="process__cta-emoji">🔥</span>
+            бесплатная консультация
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PRICING — Figma 20005156:153213 ═══ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+
+      <h2 class="pricing__title">
+        тарифы
+        <img class="pricing__title-star" src="assets/icons/marquee-star.svg" alt="" />
+      </h2>
+
+      <div class="pricing__list">
+
+        <!-- ── Tariff 1 — Быстрый старт (lime) ─────────────── -->
+        <article class="pricing__tariff pricing__tariff--lime">
+          <div class="pricing__left">
+            <div class="pricing__summary">
+              <div class="pricing__name-pill"><span>Быстрый старт</span></div>
+              <div class="pricing__term">
+                <p class="pricing__term-label">Срок внедрения</p>
+                <div class="pricing__term-pill">до 5 рабочих дней</div>
+              </div>
+              <hr class="pricing__divider" />
+              <p class="pricing__price">от 17 500 ₽</p>
+
+              <button class="pricing__bonus" type="button" data-popup="bonus">
+                <div class="pricing__bonus-icon">
+                  <img src="assets/icons/flame.svg" alt="" />
+                </div>
+                <span>Бонусы</span>
+              </button>
+            </div>
+
+            <div class="pricing__cta">
+              <button class="pricing__cta-btn" type="button" data-popup="received">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы получаете<br />в этом тарифе</span>
+              </button>
+              <button class="pricing__cta-btn" type="button" data-popup="bitrix">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы сможете делать<br /><em>с Битрикс24</em></span>
+              </button>
+              <button class="pricing__cta-btn pricing__cta-btn--bonus" type="button" data-popup="bonus">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Бонусы</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pricing__included">
+            <h3 class="pricing__included-title">Что входит</h3>
+            <ul class="pricing__features">
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Бесплатный бриф-звонок</strong>
+                    <span class="pricing__feature-meta">до 30 минут</span>
+                  </div>
+                  <p>Вы рассказываете о вашем бизнесе и задачах — мы задаём точные вопросы, фиксируем всё и формируем техническое задание.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Подготовка ТЗ</strong>
+                    <span class="pricing__feature-meta">15 минут</span>
+                  </div>
+                  <p>На основе звонка мы создаём понятный документ с задачами и логикой настройки. Всё согласуем заранее.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>1 воронка продаж</strong>
+                    <span class="pricing__feature-meta">до 10 стадий</span>
+                  </div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Простая автоматизация</strong>
+                    <span class="pricing__feature-meta">до 10 роботов</span>
+                  </div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Структура компании</strong></div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка карточек</strong></div>
+                  <p>Сделки; Контакта; Компании, Товара</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка прав доступа для сотрудников</strong></div>
+                  <p>Чтобы каждый видел только то, что должен</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка внутренних чатов и рабочих групп</strong></div>
+                  <p>Создадим удобное пространство для командной коммуникации</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Интеграция</strong></div>
+                  <ul class="pricing__sub">
+                    <li>Авито</li>
+                    <li>Почта (входящая/исходящая)</li>
+                    <li>Телефония (если уже подключена и совместима с Битрикс24)</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Обучение</strong>
+                    <span class="pricing__feature-meta">1 час</span>
+                  </div>
+                  <p>Покажем, как пользоваться системой. Ответим на все вопросы.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ── Tariff 2 — Для кого бизнес — жизнь! (pink) ──── -->
+        <article class="pricing__tariff pricing__tariff--pink">
+          <div class="pricing__left">
+            <div class="pricing__summary">
+              <div class="pricing__name-pill"><span>Для кого бизнес — жизнь!</span></div>
+              <div class="pricing__term">
+                <p class="pricing__term-label">Срок внедрения</p>
+                <div class="pricing__term-pill">до 10 рабочих дней</div>
+              </div>
+              <hr class="pricing__divider" />
+              <p class="pricing__price">от 53 000 ₽</p>
+
+              <button class="pricing__bonus" type="button" data-popup="bonus" data-bonus-days="14">
+                <div class="pricing__bonus-icon">
+                  <img src="assets/icons/flame.svg" alt="" />
+                </div>
+                <span>Бонусы</span>
+              </button>
+            </div>
+
+            <div class="pricing__cta">
+              <button class="pricing__cta-btn" type="button" data-popup="received">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы получаете<br />в этом тарифе</span>
+              </button>
+              <button class="pricing__cta-btn" type="button" data-popup="bitrix">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы сможете делать<br /><em>с Битрикс24</em></span>
+              </button>
+              <button class="pricing__cta-btn pricing__cta-btn--bonus" type="button" data-popup="bonus" data-bonus-days="14">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Бонусы</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pricing__included">
+            <h3 class="pricing__included-title">Что входит</h3>
+            <ul class="pricing__features">
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Бесплатный бриф-звонок</strong>
+                    <span class="pricing__feature-meta">до 30 минут</span>
+                  </div>
+                  <p>Вы рассказываете о вашем бизнесе и задачах — мы задаём точные вопросы, фиксируем всё и формируем техническое задание.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Подготовка ТЗ</strong>
+                    <span class="pricing__feature-meta">30 минут</span>
+                  </div>
+                  <p>На основе звонка мы создаём понятный документ с задачами и логикой настройки. Всё согласуем заранее.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Простая карта процессов и воронок</strong></div>
+                  <p>Визуализируем</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>До 3 (трёх) воронок продаж</strong></div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Автоматизация</strong></div>
+                  <p>до 10 роботов на воронку</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Структура компании</strong></div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка карточек</strong></div>
+                  <ul class="pricing__sub">
+                    <li>Сделки</li>
+                    <li>Контакта</li>
+                    <li>Компании</li>
+                    <li>Товара</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка прав доступа для сотрудников</strong></div>
+                  <p>Чтобы каждый видел только то, что должен</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка внутренних чатов и рабочих групп</strong></div>
+                  <p>Создадим удобное пространство для командной коммуникации</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Интеграция</strong></div>
+                  <ul class="pricing__sub">
+                    <li>Авито</li>
+                    <li>Почта (входящая/исходящая)</li>
+                    <li>Телефония (если уже подключена и совместима с Битрикс24)</li>
+                    <li>WhatsApp, Telegram</li>
+                    <li>Заявки с сайта</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Инструкция</strong></div>
+                  <p>Напишем понятную инструкцию как пользоваться CRM системой</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ── Tariff 3 — Для серьёзных дядей (violet) ───── -->
+        <article class="pricing__tariff pricing__tariff--violet">
+          <div class="pricing__left">
+            <div class="pricing__summary">
+              <div class="pricing__name-pill"><span>Для серьёзных дядей</span></div>
+              <div class="pricing__term">
+                <p class="pricing__term-label">Срок внедрения</p>
+                <div class="pricing__term-pill">до 26 рабочих дней</div>
+              </div>
+              <hr class="pricing__divider" />
+              <p class="pricing__price">от 53 000 ₽</p>
+
+              <button class="pricing__bonus" type="button" data-popup="bonus" data-bonus-days="14">
+                <div class="pricing__bonus-icon">
+                  <img src="assets/icons/flame.svg" alt="" />
+                </div>
+                <span>Бонусы</span>
+              </button>
+            </div>
+
+            <div class="pricing__cta">
+              <button class="pricing__cta-btn" type="button" data-popup="received">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы получаете<br />в этом тарифе</span>
+              </button>
+              <button class="pricing__cta-btn" type="button" data-popup="bitrix">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Что вы сможете делать<br /><em>с Битрикс24</em></span>
+              </button>
+              <button class="pricing__cta-btn pricing__cta-btn--bonus" type="button" data-popup="bonus" data-bonus-days="14">
+                <img class="pricing__cta-icon" src="assets/icons/sparkle.svg" alt="" />
+                <span>Бонусы</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pricing__included">
+            <h3 class="pricing__included-title">Что входит</h3>
+            <ul class="pricing__features">
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Бесплатный бриф-звонок</strong>
+                    <span class="pricing__feature-meta">до 30 минут</span>
+                  </div>
+                  <p>Вы рассказываете о вашем бизнесе и задачах — мы задаём точные вопросы, фиксируем всё и формируем техническое задание.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Подготовка ТЗ</strong>
+                    <span class="pricing__feature-meta">30 минут</span>
+                  </div>
+                  <p>На основе звонка мы создаём понятный документ с задачами и логикой настройки. Всё согласуем заранее.</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Детальная карта процессов и воронок</strong></div>
+                  <p>Визуализируем</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>До 5 (пяти) воронок продаж</strong></div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Автоматизация</strong></div>
+                  <p>до 20 роботов на воронку</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Структура компании</strong></div>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка карточек</strong></div>
+                  <ul class="pricing__sub">
+                    <li>Лида</li>
+                    <li>Сделки</li>
+                    <li>Контакта</li>
+                    <li>Компании</li>
+                    <li>Товара</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка прав доступа для сотрудников</strong></div>
+                  <p>Чтобы каждый видел только то, что должен</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Настройка внутренних чатов и рабочих групп</strong></div>
+                  <p>Создадим удобное пространство для командной коммуникации</p>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head"><strong>Интеграция</strong></div>
+                  <ul class="pricing__sub">
+                    <li>Авито</li>
+                    <li>Почта (входящая/исходящая)</li>
+                    <li>Телефония (если уже подключена и совместима с Битрикс24)</li>
+                    <li>WhatsApp, Telegram</li>
+                    <li>Заявки с сайта</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true"></span>
+                <div class="pricing__feature-body">
+                  <div class="pricing__feature-head">
+                    <strong>Обучение</strong>
+                    <span class="pricing__feature-meta">2 часа</span>
+                  </div>
+                  <p>Покажем, как пользоваться системой. Ответим на все вопросы.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTACT CTA — Figma 20005156:153787 ═══ -->
+  <section class="contact-cta" id="contact-cta">
+    <div class="container">
+      <div class="contact-cta__card">
+
+        <div class="contact-cta__content">
+          <div class="contact-cta__text">
+            <h2 class="contact-cta__title">Оставьте заявку<br>на <span>битрикс24</span></h2>
+            <p class="contact-cta__subtitle">И получите бесплатную консультацию</p>
+          </div>
+          <button class="contact-cta__btn" type="button" data-popup="received">Оставить заявку</button>
+        </div>
+
+        <div class="contact-cta__tags" aria-hidden="true">
+          <div class="contact-cta__pill contact-cta__pill--funnel"><span>Воронка продаж</span></div>
+          <div class="contact-cta__pill contact-cta__pill--clients"><span>Клиенты</span></div>
+          <div class="contact-cta__pill contact-cta__pill--auto"><span>Автоматизация</span></div>
+          <div class="contact-cta__pill contact-cta__pill--tasks"><span>Задачи</span></div>
+          <div class="contact-cta__pill contact-cta__pill--deals"><span>Сделки</span></div>
+          <div class="contact-cta__pill contact-cta__pill--requests"><span>Заявки</span></div>
+          <div class="contact-cta__pill contact-cta__pill--crm"><span>CRM</span></div>
+
+          <div class="contact-cta__badge contact-cta__badge--folder"><span><img src="assets/icons/folder.svg" alt=""></span></div>
+          <div class="contact-cta__badge contact-cta__badge--share"><span><img src="assets/icons/share.svg" alt=""></span></div>
+          <div class="contact-cta__badge contact-cta__badge--at"><span>@</span></div>
+          <div class="contact-cta__badge contact-cta__badge--hash"><span>#</span></div>
+
+          <img class="contact-cta__phone" src="assets/icons/phone-lime.svg" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ MARQUEE LINE 2 — Figma 20005156:153782 ═══ -->
+  <section class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+      </div>
+      <div class="marquee__content" aria-hidden="true">
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+        <span class="marquee__text">Давайте сделаем что-нибудь классное</span>
+        <img class="marquee__icon marquee__icon--lightning" src="assets/icons/marquee-lightning.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FAQ — Figma 20005189:234689 ═══ -->
+  <section class="faq" id="faq">
+    <div class="container faq__row">
+      <div class="faq__heading">
+        <h2 class="faq__title">Вопросы<br>и ответы</h2>
+        <img class="faq__star" src="assets/icons/star.svg" alt="" aria-hidden="true" />
+      </div>
+      <div class="faq__list">
+
+        <details class="faq__item" open>
+          <summary class="faq__question">
+            <span>С какого бюджета стоит начинать?</span>
+            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M6 8l4 4 4-4" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Чтобы оценить эффективность рекламы, рекомендуем начать с бюджета в 6 000 ₽. Пополните рекламный счёт на эту сумму, и Яндекс подарит вам промокод на 3 000 ₽ без НДС — просто заполните форму. Минимальный бюджет для старта — 300 ₽ без НДС</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>С какого бюджета стоит начинать?</span>
+            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M6 8l4 4 4-4" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Чтобы оценить эффективность рекламы, рекомендуем начать с бюджета в 6 000 ₽.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>С какого бюджета стоит начинать?</span>
+            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M6 8l4 4 4-4" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Чтобы оценить эффективность рекламы, рекомендуем начать с бюджета в 6 000 ₽.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>С какого бюджета стоит начинать?</span>
+            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M6 8l4 4 4-4" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Чтобы оценить эффективность рекламы, рекомендуем начать с бюджета в 6 000 ₽.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>С какого бюджета стоит начинать?</span>
+            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M6 8l4 4 4-4" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Чтобы оценить эффективность рекламы, рекомендуем начать с бюджета в 6 000 ₽.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TELEGRAM CTA — Figma 20005156:155370 ═══ -->
+  <section class="telegram-cta">
+    <a href="https://t.me/" class="telegram-cta__link" target="_blank" rel="noopener noreferrer">
+      <div class="telegram-cta__circle">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.4 10.8L26.5 29.2C26.5 29.2 25.9 30.7 24.3 30L16.5 23.8L13.1 22.2L7.5 20.4C7.5 20.4 6.6 20.1 6.5 19.4C6.4 18.7 7.5 18.3 7.5 18.3L28.7 10.2C28.7 10.2 30.4 9.5 30.4 10.8Z" fill="#121313"/>
+          <path d="M15.4 29.3C15.4 29.3 15.1 29.3 14.8 28.2C14.5 27.1 13.1 22.2 13.1 22.2L25.5 14.4C25.5 14.4 26.2 14 26.2 14.4C26.2 14.4 26.2 14.6 25.5 15.2C24.8 15.8 16.6 23.3 16.6 23.3" fill="#121313"/>
+        </svg>
+      </div>
+      <p class="telegram-cta__text">Нажмите, чтобы задать вопрос или&nbsp;обсудить проект</p>
+    </a>
+  </section>
+
+
+  <!-- ═══ FOOTER — Figma 20005156:153820 ═══ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+    <div class="footer__content">
+      <!-- Logo -->
+      <a href="/" class="footer__logo">
+        <img src="assets/logo.svg" alt="NIX" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="footer__menu">
+        <a href="/#services" class="footer__menu-link">Услуги</a>
+        <a href="/cases" class="footer__menu-link">Кейсы</a>
+        <a href="/blog" class="footer__menu-link">Блог</a>
+        <a href="/contacts" class="footer__menu-link">Контакты</a>
+      </nav>
+
+      <!-- Services -->
+      <div class="footer__services">
+        <a href="/design" class="footer__services-item">Дизайн и разработка сайтов</a>
+        <a href="/bitrix24" class="footer__services-item">Внедрение Битрикс24</a>
+      </div>
+
+      <!-- Circle badge -->
+      <div class="footer__circle rotating-badge">
+        <img src="assets/digital.png" alt="Digital Agency" />
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__contact">
+        <a href="tel:+79933091207" class="footer__phone">+7 (993) 309-12-07</a>
+        <div class="footer__social">
+          <a href="mailto:info@nixagency.ru" class="footer__social-link">info@nixagency.ru</a>
+          <a href="https://t.me/nix_agency" class="footer__social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://wa.me/79933091207?text=" class="footer__social-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer__divider" />
+
+    <!-- Bottom row -->
+    <div class="footer__bottom">
+      <a href="#" class="footer__bottom-link">Реквизиты</a>
+      <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+      <span class="footer__bottom-link">Сайт разработан агентством NIX</span>
+    </div>
+    </div>
+  </footer>
+
+
+</div>
+
+
+<!-- ═══ POPUP — Figma 20005156:153881 ═══ -->
+<div class="popup" id="popupReceived" aria-hidden="true">
+  <div class="popup__backdrop" data-popup-close></div>
+  <div class="popup__frame" role="dialog" aria-modal="true" aria-labelledby="popupReceivedTitle">
+    <button class="popup__close" type="button" aria-label="Закрыть" data-popup-close>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="popup__content">
+      <div class="popup__head">
+        <h3 class="popup__title" id="popupReceivedTitle">Что вы получаете<br />в этом тарифе</h3>
+        <img class="popup__title-star" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+      <div class="popup__card">
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Готовую CRM под ваш бизнес</strong>
+            <p>Всё уже настроено: воронка, сделки, карточки, структура компании, автоматизация.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Контакт-центр в одном окне</strong>
+            <p>Почта, телефония, Авито, сайт — все обращения приходят в Битрикс24. Вы ничего не упустите.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Прозрачный процесс продаж</strong>
+            <p>Понимаете, на каком этапе каждый клиент. Все шаги зафиксированы — от заявки до сделки.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Автоматизацию рутинных действий</strong>
+            <p>Роботы сами напомнят, отправят письмо или создадут задачу — вы экономите время.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Удобную систему для команды</strong>
+            <p>Чаты, задачи, документы — всё внутри. Коммуникация и работа сотрудников в одном месте.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Права доступа и порядок</strong>
+            <p>Каждый сотрудник видит только своё. Никакой путаницы и риска утечки данных.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Обучение и поддержку на старте</strong>
+            <p>Мы всё покажем, объясним и запишем видео. Вы сможете пользоваться системой уверенно с первого дня.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ POPUP — Figma 20005156:154124 ═══ -->
+<div class="popup" id="popupBitrix" aria-hidden="true">
+  <div class="popup__backdrop" data-popup-close></div>
+  <div class="popup__frame" role="dialog" aria-modal="true" aria-labelledby="popupBitrixTitle">
+    <button class="popup__close" type="button" aria-label="Закрыть" data-popup-close>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="popup__content">
+      <div class="popup__head">
+        <h3 class="popup__title" id="popupBitrixTitle">Что вы сможете делать с <span class="popup__title-accent">Битрикс24</span></h3>
+        <img class="popup__title-star" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+      <div class="popup__card">
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Хранить всех клиентов в одном месте</strong>
+            <p>Контакты, история общения, сделки — ничего не теряется.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Вести клиентов по этапам сделки</strong>
+            <p>Понимаете, на каком этапе каждый клиент и что с ним делать дальше.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Получать автоматические напоминания</strong>
+            <p>Система сама напомнит, когда перезвонить, отправить письмо или поставить задачу.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Общаться с командой прямо в системе</strong>
+            <p>Чаты, комментарии, видеозвонки — без Telegram и переписок в почте.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Ставить задачи сотрудникам и контролировать выполнение</strong>
+            <p>Видно, кто чем занят и что просрочено.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Хранить и обмениваться файлами</strong>
+            <p>Документы, ТЗ, фотографии — всегда под рукой, доступны команде.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Единое окно для общения с клиентами</strong>
+            <p>Почта, Авито, телефония, заявки с сайта — всё приходит в одну систему. Не нужно переключаться между мессенджерами и вкладками — вы видите всю переписку, звонки и заявки в одном интерфейсе.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Смотреть отчёты по продажам и сотрудникам</strong>
+            <p>Видите, сколько заявок, сколько сделок, кто как работает.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Создавать отделы и управлять доступом</strong>
+            <p>Каждый сотрудник видит только то, что ему нужно.</p>
+          </div>
+        </div>
+        <div class="popup__item">
+          <span class="popup__check" aria-hidden="true"></span>
+          <div class="popup__item-body">
+            <strong>Вести проекты и обсуждать их внутри системы</strong>
+            <p>Не нужно прыгать между задачами, файлами и чатами — всё связано.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ POPUP — Figma 20005156:154430 (Бонусы) ═══ -->
+<div class="popup popup--narrow" id="popupBonus" aria-hidden="true">
+  <div class="popup__backdrop" data-popup-close></div>
+  <div class="popup__frame" role="dialog" aria-modal="true" aria-labelledby="popupBonusTitle">
+    <button class="popup__close" type="button" aria-label="Закрыть" data-popup-close>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="popup__content popup__content--narrow">
+      <div class="popup__head">
+        <h3 class="popup__title" id="popupBonusTitle">Бонусы</h3>
+        <img class="popup__title-star" src="assets/icons/marquee-star.svg" alt="" />
+      </div>
+      <div class="popup__bonuses">
+        <div class="popup__bonus popup__bonus--lime">
+          <div class="popup__bonus-head">
+            <span class="popup__bonus-emoji">💥</span>
+            <p>30 дней использования Битрикс24 — бесплатно</p>
+          </div>
+          <div class="popup__bonus-body">
+            <p>Вы получаете месяц работы в платной версии CRM без оплаты. Тестируйте весь функционал и принимайте решение с уверенностью.</p>
+          </div>
+        </div>
+        <div class="popup__bonus popup__bonus--pink">
+          <div class="popup__bonus-head">
+            <span class="popup__bonus-emoji">🔥</span>
+            <p>Скидка 50% на маркетплейс Битрикс24</p>
+          </div>
+          <div class="popup__bonus-body">
+            <p>В течение всего 2025 года — на виджеты, интеграции, готовые шаблоны и расширения. Экономьте на развитии своей CRM.</p>
+          </div>
+        </div>
+        <div class="popup__bonus popup__bonus--violet">
+          <div class="popup__bonus-head">
+            <span class="popup__bonus-emoji">🚀</span>
+            <p id="bonusSupportText">Поддержка 7 дней после запуска — бесплатно</p>
+          </div>
+          <div class="popup__bonus-body">
+            <p>После запуска мы рядом: правим мелкие детали, отвечаем на вопросы, подсказываем.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ POPUP: Что входит (mobile, контент клонируется из текущего тарифа) ═══ -->
+<div class="popup" id="popupIncluded" aria-hidden="true">
+  <div class="popup__backdrop" data-popup-close></div>
+  <div class="popup__frame" role="dialog" aria-modal="true" aria-labelledby="popupIncludedTitle">
+    <button class="popup__close" type="button" aria-label="Закрыть" data-popup-close>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="popup__content">
+      <div class="popup__head">
+        <h3 class="popup__title" id="popupIncludedTitle">Что входит</h3>
+      </div>
+      <div class="popup__card" id="popupIncludedBody"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ MOBILE MENU OVERLAY (вне #scale-wrapper: fixed не работает внутри transform) ═══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__inner">
+
+    <div class="mobile-menu__header">
+      <a href="/" class="mobile-menu__logo">
+        <img src="assets/logo.svg" alt="NIX Agency" />
+      </a>
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu__content">
+      <nav class="mobile-menu__nav">
+        <a href="/" class="mobile-menu__link">Главная</a>
+        <a href="/#services" class="mobile-menu__link">Услуги</a>
+        <a href="/cases" class="mobile-menu__link">Кейсы</a>
+        <a href="/blog" class="mobile-menu__link">Блог</a>
+        <a href="/contacts" class="mobile-menu__link">Контакты</a>
+      </nav>
+
+      <div class="mobile-menu__contact">
+        <a href="tel:+79933091207" class="mobile-menu__phone">+7 (993) 309-12-07</a>
+        <div class="mobile-menu__social">
+          <a href="mailto:info@nixagency.ru" class="mobile-menu__social-link">info@nixagency.ru</a>
+          <a href="https://t.me/nix_agency" class="mobile-menu__social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://wa.me/79933091207?text=" class="mobile-menu__social-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu__circle rotating-badge">
+      <img src="assets/digital.png" alt="Digital Agency" />
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // На странице /bitrix24 нет планшетного макета 640 —
+  // мобильная база 320 растягивается вплоть до 1200.
+  var MOBILE_BASE = 320;
+  var MOBILE_MIN_WIDTH = 320;
+  var DESKTOP_BASE = 1200;
+  var DESKTOP_MAX_SCALE = 1.6;
+
+  function updatePageScale() {
+    var wrapper = document.getElementById('scale-wrapper');
+    if (!wrapper) return;
+
+    var w = window.innerWidth;
+    var root = document.documentElement;
+    var scale, baseWidth;
+
+    if (w < 1200) {
+      var effectiveWidth = Math.max(w, MOBILE_MIN_WIDTH);
+      scale = effectiveWidth / MOBILE_BASE;
+      baseWidth = MOBILE_BASE;
+    } else {
+      scale = Math.min(w / DESKTOP_BASE, DESKTOP_MAX_SCALE);
+      baseWidth = DESKTOP_BASE;
+    }
+
+    root.style.setProperty('--page-scale', scale);
+    root.style.setProperty('--wrapper-width', baseWidth + 'px');
+
+    var realHeight = wrapper.getBoundingClientRect().height;
+    document.body.style.height = realHeight + 'px';
+  }
+
+  window.addEventListener('load', updatePageScale);
+  window.addEventListener('resize', updatePageScale);
+  if (document.fonts) {
+    document.fonts.ready.then(updatePageScale);
+  }
+
+  // Mobile menu toggle
+  (function() {
+    var burger = document.querySelector('.header__burger');
+    var menu = document.getElementById('mobileMenu');
+    var close = document.querySelector('.mobile-menu__close');
+    var links = document.querySelectorAll('.mobile-menu__link');
+    if (!burger || !menu) return;
+
+    function open() {
+      menu.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function shut() {
+      menu.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    burger.addEventListener('click', open);
+    if (close) close.addEventListener('click', shut);
+    links.forEach(function(l) { l.addEventListener('click', shut); });
+  })();
+
+  // ── JS sticky for .process title (reliable under transform:scale) ──
+  (function() {
+    var section = document.querySelector('.process');
+    var title = document.querySelector('.process__title-wrap');
+    if (!section || !title) return;
+    var STICKY_TOP = 40; // viewport px from top
+
+    function update() {
+      // Disable sticky on mobile breakpoint — title статичный
+      if (window.innerWidth < 1200) {
+        title.style.transform = '';
+        return;
+      }
+      var scale = parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue('--page-scale')
+      ) || 1;
+      var rect = section.getBoundingClientRect();
+      var titleH = title.getBoundingClientRect().height;
+      var maxOffset = (rect.height - titleH) / scale;
+
+      if (rect.top >= STICKY_TOP) {
+        title.style.transform = '';
+      } else if (rect.top + (maxOffset * scale) + titleH <= STICKY_TOP + titleH) {
+        title.style.transform = 'translateY(' + maxOffset + 'px)';
+      } else {
+        var offset = (STICKY_TOP - rect.top) / scale;
+        title.style.transform = 'translateY(' + offset + 'px)';
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  // ── Pricing popup ────────────────────────────────────────────────
+  (function() {
+    var ACCENTS = {
+      'pricing__tariff--lime':   '#89DF00',
+      'pricing__tariff--pink':   '#FF49BE',
+      'pricing__tariff--violet': '#514DF9'
+    };
+
+    var POPUPS = {
+      'received': document.getElementById('popupReceived'),
+      'bitrix':   document.getElementById('popupBitrix'),
+      'bonus':    document.getElementById('popupBonus'),
+      'included': document.getElementById('popupIncluded')
+    };
+
+    function openPopup(popup, accent) {
+      if (!popup) return;
+      popup.style.setProperty('--popup-accent', accent);
+      popup.classList.add('is-open');
+      popup.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePopup(popup) {
+      popup.classList.remove('is-open');
+      popup.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function closeAll() {
+      Object.keys(POPUPS).forEach(function(k) { if (POPUPS[k]) closePopup(POPUPS[k]); });
+    }
+
+    var bonusSupportEl = document.getElementById('bonusSupportText');
+
+    document.querySelectorAll('[data-popup]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var kind = btn.getAttribute('data-popup');
+        var popup = POPUPS[kind];
+        if (!popup) return;
+        var tariff = btn.closest('.pricing__tariff');
+        var accent = '#89DF00';
+        if (tariff) {
+          for (var key in ACCENTS) {
+            if (tariff.classList.contains(key)) { accent = ACCENTS[key]; break; }
+          }
+        }
+        if (kind === 'bonus' && bonusSupportEl) {
+          var days = btn.getAttribute('data-bonus-days') || '7';
+          bonusSupportEl.textContent = 'Поддержка ' + days + ' дней после запуска — бесплатно';
+        }
+        openPopup(popup, accent);
+      });
+    });
+
+    Object.keys(POPUPS).forEach(function(k) {
+      var popup = POPUPS[k];
+      if (!popup) return;
+      popup.querySelectorAll('[data-popup-close]').forEach(function(el) {
+        el.addEventListener('click', function() { closePopup(popup); });
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeAll();
+    });
+
+    // «Что входит» на мобильной — клонируем features текущего тарифа в попап
+    var includedBody = document.getElementById('popupIncludedBody');
+    document.querySelectorAll('.pricing__included').forEach(function(block) {
+      block.addEventListener('click', function() {
+        if (window.innerWidth >= 1200) return;
+        var popup = POPUPS['included'];
+        if (!popup || !includedBody) return;
+        var features = block.querySelector('.pricing__features');
+        if (!features) return;
+        includedBody.innerHTML = '';
+        includedBody.appendChild(features.cloneNode(true));
+        var tariff = block.closest('.pricing__tariff');
+        var accent = '#89DF00';
+        if (tariff) {
+          for (var key in ACCENTS) {
+            if (tariff.classList.contains(key)) { accent = ACCENTS[key]; break; }
+          }
+        }
+        openPopup(popup, accent);
+      });
+    });
+  })();
+
+  // ── FAQ accordion — keep only one open at a time ─────────────────
+  (function() {
+    var items = document.querySelectorAll('.faq__item');
+    items.forEach(function(item) {
+      item.addEventListener('toggle', function() {
+        if (item.open) {
+          items.forEach(function(other) {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

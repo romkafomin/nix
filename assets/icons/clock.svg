@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="clock">
+<path id="Vector" d="M18.4987 33.9168C27.0131 33.9168 33.9154 27.0146 33.9154 18.5002C33.9154 9.98577 27.0131 3.0835 18.4987 3.0835C9.98431 3.0835 3.08203 9.98577 3.08203 18.5002C3.08203 27.0146 9.98431 33.9168 18.4987 33.9168Z" stroke="var(--stroke-0, #121313)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M18.5 9.25V18.5H26.2083" stroke="var(--stroke-0, #121313)" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+</svg>
